@@ -1,0 +1,82 @@
+/** 清除内外边距 **/
+body{
+background:#d1edff url(../images/index1.jpg) top center repeat-x;
+border:none; 
+margin: 0; 
+padding: 0; 
+}
+/** 设置默认字体 **/ 
+body,button, input, select, textarea { 
+font: 12px/1.5 '微软雅黑',tahoma, Srial, helvetica, sans-serif; 
+} 
+/** 重置图片元素 **/ 
+img{ border:0px;} 
+
+
+/** 重置placeholder **/ 
+::-webkit-input-placeholder { color:#ccc; }
+::-moz-placeholder { color:#ccc; } /* firefox 19+ */
+input:-ms-input-placeholder { color:#ccc; } /* ie */
+input:-moz-placeholder { color:#ccc; }
+
+.bg_tota{ background:url(../images/bg2.jpg) top center no-repeat;
+	
+}
+.login_box{
+	height: 430px;
+	width: 850px;
+	background: url(../images/login.png) no-repeat;
+}
+.box_all{
+	margin-top: 130px;
+	float: right;
+	width: 420px;
+}
+.box_all input{
+	height: 38px;
+	border: none;
+	/*color: #000;*/
+	background: none;
+	padding-left: 20px;
+	line-height: 30px;
+	width: 280px;/*322px*/
+	float: left;
+}
+
+/* 登录框自动完成颜色复位 */
+.box_all input:-webkit-autofill { 
+	-webkit-box-shadow: 0 0 0 1000px #fcfcfc inset; 
+    height: 36px;
+    line-height: 28px;
+    width: 280px;
+    margin-left: 1px;
+    margin-top: -4px;
+    padding-left: 20px;
+}
+.box_all tr .mini-textbox input{
+	text-align: left;
+	float: left;
+	width: 182px;
+}
+.box_all tr .btn-textbox input{
+	height: 35px;
+	width: 148px;
+	color: #fff;
+	border: none;
+	float: left;
+	padding-left:none;
+	padding-left:0;
+	background: #399cdd;
+	font-size: 14px;
+}
+.box_all tr .btn2-textbox input{
+	height: 35px;
+	width: 148px;
+	color: #fff;
+	border: none;
+	float: left;
+	padding-left:none;
+	padding-left:0;
+	background: #b1b1b1;
+	font-size: 14px;
+}

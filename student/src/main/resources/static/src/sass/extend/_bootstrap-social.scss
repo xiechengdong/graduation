@@ -1,0 +1,60 @@
+.btn-weibo {
+  @include btn-social(#e6162d);
+
+  .fa-weibo, .mf-weibo {
+    color: #fff;
+  }
+}
+
+.btn-weixin {
+  @include btn-social(#87dc4a);
+
+  .fa-weixin, .mf-weixin {
+    color: #fff;
+  }
+}
+
+.btn-qq {
+  @include btn-social(#1594d3);
+
+  .fa-qq, .mf-qq {
+    color: #fff;
+  }
+}
+
+.btn-alipay {
+  @include btn-social(#00a0e9);
+
+  .fa-alipay, .mf-alipay {
+    color: #fff;
+  }
+}
+
+.btn-taobao {
+  @include btn-social(#ef573c);
+
+  .fa-taobao, .mf-taobao {
+    color: #fff;
+  }
+}
+
+.fa-weibo, .mf-weibo {
+  color: #e6162d;
+}
+
+.fa-weixin, .mf-weixin {
+  color: #87dc4a;
+}
+
+.fa-qq, .mf-qq {
+  color: #1594d3;
+}
+
+.fa-alipay, .mf-alipay {
+  color: #00a0e9;
+}
+
+.fa-taobao, .mf-taobao {
+  color: #ef573c;
+}
+

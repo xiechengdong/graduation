@@ -1,0 +1,24 @@
+//============================================================
+//table为基础的网格定位
+
+//重置bootstrap,网格在table中的padding
+@mixin reset-bootstrap-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    padding-right: floor(($grid-gutter-width / 5));
+    padding-left: ceil(($grid-gutter-width / 5));
+  }
+}
+
+table.table-grid {
+  width: 100%;
+  max-width: 100%;
+
+  label {
+    margin: 0.2142857145em 0 0.2142857145em  0;
+  }
+
+  @include reset-bootstrap-grid-columns();
+}

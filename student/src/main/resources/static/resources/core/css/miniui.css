@@ -1,0 +1,6891 @@
+@charset "UTF-8";
+/* line 2, ../../../src/sass/miniui/_miniui.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../../../src/sass/miniui/_miniui.scss */
+html {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 19, ../../../src/sass/miniui/_miniui.scss */
+body {
+  font-family: Tahoma, Verdana, 宋体;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/* line 25, ../../../src/sass/miniui/_miniui.scss */
+table {
+  position: relative;
+}
+
+/* line 30, ../../../src/sass/miniui/_miniui.scss */
+.app-header {
+  background: url(../../lib-base/miniui/themes/default/images/header.gif) repeat-x 0 -1px;
+}
+
+/* line 35, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-icon,
+.mini-button-allow,
+.mini-menuitem-icon,
+.mini-menuitem-allow {
+  line-height: 16px;
+  text-align: center;
+}
+
+/* line 48, ../../../src/sass/miniui/_miniui.scss */
+.mini-iconfont, .mini-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+}
+
+/* line 62, ../../../src/sass/miniui/_miniui.scss */
+.mini-disabled {
+  color: gray;
+  cursor: default;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+/* line 71, ../../../src/sass/miniui/_miniui.scss */
+.mini-repaint {
+  zoom: 1;
+  background-color: transparent;
+  -moz-outline: none;
+}
+
+/* line 78, ../../../src/sass/miniui/_miniui.scss */
+html, body {
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+}
+
+/* line 79, ../../../src/sass/miniui/_miniui.scss */
+.mini-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .1;
+  -moz-opacity: .1;
+  filter: alpha(opacity=10);
+  background: #555;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop));
+  _left: expression(eval(document.documentElement.scrollLeft));
+  _height: expression(eval(document.documentElement.clientHeight));
+  _width: expression(eval(document.documentElement.clientWidth));
+}
+
+/* line 90, ../../../src/sass/miniui/_miniui.scss */
+.mini-modal iframe {
+  opacity: .0;
+  -moz-opacity: .0;
+  filter: alpha(opacity=0);
+}
+
+/* line 95, ../../../src/sass/miniui/_miniui.scss */
+.mini-shadow {
+  position: absolute;
+  overflow: hidden;
+  background: #ddd;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2,MakeShadow=false,ShadowOpacity=0.3);
+  z-index: 99;
+  display: none !important;
+}
+
+/* line 108, ../../../src/sass/miniui/_miniui.scss */
+.mini-popup {
+  background: white;
+  border: 1px solid #8B8B8B;
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+}
+
+/* line 120, ../../../src/sass/miniui/_miniui.scss */
+.mini-proxy {
+  position: absolute;
+  overflow: hidden;
+  z-index: 100000000;
+  background: gray;
+  opacity: .4;
+  -moz-opacity: .4;
+  filter: alpha(opacity=40);
+}
+
+/* line 132, ../../../src/sass/miniui/_miniui.scss */
+.mini-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+}
+
+/* line 140, ../../../src/sass/miniui/_miniui.scss */
+body .mini-fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop));
+  _left: expression(eval(document.documentElement.scrollLeft));
+  _height: expression(eval(document.documentElement.clientHeight));
+  _width: expression(eval(document.documentElement.clientWidth));
+}
+
+/* line 149, ../../../src/sass/miniui/_miniui.scss */
+.mini-mask-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  opacity: .3;
+  -moz-opacity: .3;
+  filter: alpha(opacity=30);
+}
+
+/* line 160, ../../../src/sass/miniui/_miniui.scss */
+.mini-mask-msg {
+  position: absolute;
+  cursor: wait;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  color: #222;
+  font-family: tahoma,arial,verdana,sans-serif;
+  font-size: 12px;
+}
+
+/* line 170, ../../../src/sass/miniui/_miniui.scss */
+.mini-mask-loading {
+  padding: 10px 8px 10px 30px;
+  background: #fff url(../../lib-base/miniui/themes/default/images/grid/loading.gif) no-repeat scroll 5px 50%;
+  border: 2px solid #517fad;
+}
+
+/* line 178, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* line 183, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools span {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* line 191, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools span,
+.mini-tools a {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+/* line 199, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools-close {
+  background: url(../../lib-base/miniui/themes/default/images/tools/close.gif) no-repeat 50% 1px;
+  _background-position: 50% 3px;
+}
+
+/* line 204, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/tools/collapse.gif) no-repeat 50% 50%;
+  width: 13px;
+  _background-position: 50% 3px;
+}
+
+/* line 210, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools .mini-tools-expand {
+  background: url(../../lib-base/miniui/themes/default/images/tools/expand.gif) no-repeat 50% 50%;
+  width: 13px;
+  _background-position: 50% 3px;
+}
+
+/* line 216, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools-max {
+  background: url(../../lib-base/miniui/themes/default/images/tools/max.gif) no-repeat 50% 50%;
+  _background-position: 50% 3px;
+}
+
+/* line 221, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools-min {
+  background: url(../../lib-base/miniui/themes/default/images/tools/min.gif) no-repeat 50% 50%;
+  _background-position: 50% 3px;
+}
+
+/* line 226, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools-restore {
+  background: url(../../lib-base/miniui/themes/default/images/tools/restore.gif) no-repeat 50% 50%;
+  _background-position: 50% 3px;
+}
+
+/* line 231, ../../../src/sass/miniui/_miniui.scss */
+.mini-tools-refresh {
+  background: url(../../lib-base/miniui/themes/default/images/tools/refresh.gif) no-repeat 50% 50%;
+  _background-position: 50% 3px;
+}
+
+/* line 239, ../../../src/sass/miniui/_miniui.scss */
+.mini-toolbar {
+  position: relative;
+  border: solid 1px #909aa6;
+  padding: 3px;
+  _padding-bottom: 4px;
+  background: #E7EAEE url(../../lib-base/miniui/themes/default/images/toolbar/toolbar.png) repeat-x 0 0;
+}
+
+/* line 247, ../../../src/sass/miniui/_miniui.scss */
+.separator {
+  overflow: hidden;
+  display: inline-block;
+  zoom: 1;
+  border: 0;
+  border-left: solid 1px #adb3b9;
+  margin: 1px;
+  margin-top: 0px;
+  height: 18px;
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* line 262, ../../../src/sass/miniui/_miniui.scss */
+body .mini-toolbar a.mini-button-disabled, body .mini-toolbar a:hover.mini-button-disabled {
+  cursor: default;
+  background: none;
+  border-color: transparent;
+  *border-width: 0;
+  *padding: 1px;
+}
+
+/* line 272, ../../../src/sass/miniui/_miniui.scss */
+body .mini-toolbar .mini-button-disabled .mini-button-text, body .mini-toolbar a:hover.mini-button-disabled .mini-button-text {
+  color: #777;
+}
+
+/* line 277, ../../../src/sass/miniui/_miniui.scss */
+body .mini-toolbar a.mini-button-disabled, body .mini-toolbar a:hover.mini-button-disabled,
+body .mini-pager a.mini-button-disabled, body .mini-pager a:hover.mini-button-disabled {
+  background: transparent;
+  border-color: transparent;
+  *border-width: 0;
+  *padding: 1px;
+}
+
+/* line 288, ../../../src/sass/miniui/_miniui.scss */
+.mini-drag-proxy {
+  position: absolute;
+  overflow: hidden;
+  z-index: 100000000;
+  background: gray;
+  border: solid 1px #000;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  box-sizing: content-box;
+}
+
+/* line 300, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback-line {
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  z-index: 2000080;
+  height: 1px;
+  overflow: hidden;
+  background: blue;
+}
+
+/* line 305, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback {
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  background: no-repeat 3px 50% white;
+  z-index: 2000090;
+  border: solid 1px #aaa;
+  padding: 3px;
+  padding-left: 22px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  font: normal 12px tahoma, arial, helvetica, sans-serif;
+  *font-size: 11px;
+  line-height: 16px;
+}
+
+/* line 312, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback-add {
+  background-image: url(../../lib-base/miniui/themes/default/images/dragdrop/drop-add.gif);
+}
+
+/* line 316, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback-before {
+  background-image: url(../../lib-base/miniui/themes/default/images/dragdrop/drop-over.gif);
+}
+
+/* line 320, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback-after {
+  background-image: url(../../lib-base/miniui/themes/default/images/dragdrop/drop-under.gif);
+}
+
+/* line 324, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback-no {
+  background-image: url(../../lib-base/miniui/themes/default/images/dragdrop/drop-no.gif);
+}
+
+/* line 328, ../../../src/sass/miniui/_miniui.scss */
+.mini-feedback-yes {
+  background-image: url(../../lib-base/miniui/themes/default/images/dragdrop/drop-yes.gif);
+}
+
+/* line 332, ../../../src/sass/miniui/_miniui.scss */
+.mini-supergrid-feedback-add .mini-supertree-nodetext {
+  border: dotted 1px #aaa;
+  background: #ddd;
+  font-weight: bold;
+}
+
+/* line 338, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tree-feedback-add .mini-tree-nodeshow,
+body .mini-tree-feedback-add .mini-treegrid-nodeshow {
+  border: dotted 1px #aaa;
+  background: #ddd;
+  padding: 0;
+  padding-left: 1px;
+  padding-right: 2px;
+}
+
+/* line 350, ../../../src/sass/miniui/_miniui.scss */
+.mini-resizer-trigger {
+  z-index: 100;
+  position: absolute;
+  width: 14px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
+  overflow: hidden;
+  cursor: se-resize;
+  background: url(../../lib-base/miniui/themes/default/images/panel/resize.gif) no-repeat right bottom;
+}
+
+/* line 360, ../../../src/sass/miniui/_miniui.scss */
+.mini-resizer-proxy {
+  border: dotted 1px black;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10000000000;
+  background: gray;
+  opacity: .30;
+  -moz-opacity: .30;
+  filter: alpha(opacity=30);
+  border: solid 1px black;
+}
+
+/* line 370, ../../../src/sass/miniui/_miniui.scss */
+.mini-resizer-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000000;
+  background: white;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 384, ../../../src/sass/miniui/_miniui.scss */
+.mini-box {
+  overflow: hidden;
+}
+
+/* line 388, ../../../src/sass/miniui/_miniui.scss */
+.mini-box-border {
+  border: 1px solid #999999;
+  overflow: auto;
+  position: relative;
+}
+
+/* line 396, ../../../src/sass/miniui/_miniui.scss */
+body .mini-grid *,
+body .mini-supergird *,
+body .mini-gantt *,
+body .mini-panel *,
+body .mini-window * {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+/* line 408, ../../../src/sass/miniui/_miniui.scss */
+body .mini-textbox *,
+body .mini-buttonedit * {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+/* line 419, ../../../src/sass/miniui/_miniui.scss */
+.mini-fit {
+  width: auto;
+  overflow: auto;
+  position: relative;
+}
+
+/* line 427, ../../../src/sass/miniui/_miniui.scss */
+.mini-error {
+  position: relative;
+}
+
+/* line 431, ../../../src/sass/miniui/_miniui.scss */
+.mini-error .mini-errorIcon {
+  display: block;
+}
+
+/* line 435, ../../../src/sass/miniui/_miniui.scss */
+.mini-errorIcon {
+  background: url(../../lib-base/miniui/themes/default/images/textbox/error.gif) no-repeat 50% 50%;
+  width: 14px;
+  height: 16px;
+  overflow: hidden;
+  display: none;
+  cursor: default;
+  margin-top: 2px;
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* line 450, ../../../src/sass/miniui/_miniui.scss */
+.mini-error .mini-listbox-border,
+.mini-error .mini-list-border {
+  margin-right: 18px;
+}
+
+/* line 457, ../../../src/sass/miniui/_miniui.scss */
+.mini-labelfield-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 20px;
+  width: 100px;
+}
+
+/* line 462, ../../../src/sass/miniui/_miniui.scss */
+body .mini-labelfield {
+  display: block;
+  width: 250px;
+  margin-bottom: 5px;
+}
+
+/* line 468, ../../../src/sass/miniui/_miniui.scss */
+body .mini-labelfield-checkboxlist {
+  width: auto;
+  *zoom: 1;
+}
+
+/* line 475, ../../../src/sass/miniui/_miniui.scss */
+.mini-row {
+  *padding-right: 1px;
+}
+
+/* line 481, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-1, .mini-col-2, .mini-col-3, .mini-col-4, .mini-col-5, .mini-col-6, .mini-col-7, .mini-col-8, .mini-col-9, .mini-col-10, .mini-col-11, .mini-col-12,
+.mini-sm .mini-col-sm-1, .mini-sm .mini-col-sm-2, .mini-sm .mini-col-sm-3, .mini-sm .mini-col-sm-4, .mini-sm .mini-col-sm-5, .mini-sm .mini-col-sm-6, .mini-sm .mini-col-sm-7, .mini-sm .mini-col-sm-8, .mini-sm .mini-col-sm-9, .mini-sm .mini-col-sm-10, .mini-sm .mini-col-sm-11, .mini-sm .mini-col-sm-12,
+.mini-md .mini-col-md-1, .mini-md .mini-col-md-2, .mini-md .mini-col-md-3, .mini-md .mini-col-md-4, .mini-md .mini-col-md-5, .mini-md .mini-col-md-6, .mini-md .mini-col-md-7, .mini-md .mini-col-md-8, .mini-md .mini-col-md-9, .mini-md .mini-col-md-10, .mini-md .mini-col-md-11, .mini-md .mini-col-md-12,
+.mini-lg .mini-col-lg-1, .mini-lg .mini-col-lg-2, .mini-lg .mini-col-lg-3, .mini-lg .mini-col-lg-4, .mini-lg .mini-col-lg-5, .mini-lg .mini-col-lg-6, .mini-lg .mini-col-lg-7, .mini-lg .mini-col-lg-8, .mini-lg .mini-col-lg-9, .mini-lg .mini-col-lg-10, .mini-lg .mini-col-lg-11, .mini-lg .mini-col-lg-12 {
+  float: left;
+  display: inline;
+  position: relative;
+  min-height: 1px;
+}
+
+/* line 492, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-12,
+.mini-sm .mini-col-sm-12 {
+  width: 100%;
+}
+
+/* line 496, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-11,
+.mini-sm .mini-col-sm-11 {
+  width: 91.66666667%;
+}
+
+/* line 500, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-10,
+.mini-sm .mini-col-sm-10 {
+  width: 83.33333333%;
+}
+
+/* line 504, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-9,
+.mini-sm .mini-col-sm-9 {
+  width: 75%;
+}
+
+/* line 508, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-8,
+.mini-sm .mini-col-sm-8 {
+  width: 66.66666667%;
+}
+
+/* line 512, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-7,
+.mini-sm .mini-col-sm-7 {
+  width: 58.33333333%;
+}
+
+/* line 516, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-6,
+.mini-sm .mini-col-sm-6 {
+  width: 50%;
+}
+
+/* line 520, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-5,
+.mini-sm .mini-col-sm-5 {
+  width: 41.66666667%;
+}
+
+/* line 524, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-4,
+.mini-sm .mini-col-sm-4 {
+  width: 33.33333333%;
+}
+
+/* line 528, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-3,
+.mini-sm .mini-col-sm-3 {
+  width: 25%;
+}
+
+/* line 532, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-2,
+.mini-sm .mini-col-sm-2 {
+  width: 16.66666667%;
+}
+
+/* line 536, ../../../src/sass/miniui/_miniui.scss */
+.mini-col-1,
+.mini-sm .mini-col-sm-1 {
+  width: 8.33333333%;
+}
+
+/* line 541, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-12 {
+  width: 100%;
+}
+
+/* line 544, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-11 {
+  width: 91.66666667%;
+}
+
+/* line 547, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-10 {
+  width: 83.33333333%;
+}
+
+/* line 550, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-9 {
+  width: 75%;
+}
+
+/* line 553, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-8 {
+  width: 66.66666667%;
+}
+
+/* line 556, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-7 {
+  width: 58.33333333%;
+}
+
+/* line 559, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-6 {
+  width: 50%;
+}
+
+/* line 562, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-5 {
+  width: 41.66666667%;
+}
+
+/* line 565, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-4 {
+  width: 33.33333333%;
+}
+
+/* line 568, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-3 {
+  width: 25%;
+}
+
+/* line 571, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-2 {
+  width: 16.66666667%;
+}
+
+/* line 574, ../../../src/sass/miniui/_miniui.scss */
+.mini-md .mini-col-md-1 {
+  width: 8.33333333%;
+}
+
+/* line 578, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-12 {
+  width: 100%;
+}
+
+/* line 581, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-11 {
+  width: 91.66666667%;
+}
+
+/* line 584, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-10 {
+  width: 83.33333333%;
+}
+
+/* line 587, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-9 {
+  width: 75%;
+}
+
+/* line 590, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-8 {
+  width: 66.66666667%;
+}
+
+/* line 593, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-7 {
+  width: 58.33333333%;
+}
+
+/* line 596, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-6 {
+  width: 50%;
+}
+
+/* line 599, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-5 {
+  width: 41.66666667%;
+}
+
+/* line 602, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-4 {
+  width: 33.33333333%;
+}
+
+/* line 605, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-3 {
+  width: 25%;
+}
+
+/* line 608, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-2 {
+  width: 16.66666667%;
+}
+
+/* line 611, ../../../src/sass/miniui/_miniui.scss */
+.mini-lg .mini-col-lg-1 {
+  width: 8.33333333%;
+}
+
+/* line 616, ../../../src/sass/miniui/_miniui.scss */
+.mini-clearfix:after,
+.mini-row:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/* line 622, ../../../src/sass/miniui/_miniui.scss */
+.mini-clearfix,
+.mini-row {
+  *zoom: 1;
+}
+
+/* line 628, ../../../src/sass/miniui/_miniui.scss */
+.mini-unspace {
+  *overflow: hidden;
+  *height: 0;
+}
+
+/* line 636, ../../../src/sass/miniui/_miniui.scss */
+.mini-xs-active .mini-hidden-xs,
+.mini-sm-active .mini-hidden-sm,
+.mini-md-active .mini-hidden-md,
+.mini-lg-active .mini-hidden-lg {
+  display: none !important;
+}
+
+/* line 643, ../../../src/sass/miniui/_miniui.scss */
+.mini-visible-xs,
+.mini-visible-sm,
+.mini-visible-md,
+.mini-visible-lg,
+.mini-visible-xs-inline,
+.mini-visible-sm-inline,
+.mini-visible-md-inline,
+.mini-visible-lg-inline,
+.mini-visible-xs-inline-block,
+.mini-visible-sm-inline-block,
+.mini-visible-md-inline-block,
+.mini-visible-lg-inline-block {
+  display: none !important;
+}
+
+/* line 658, ../../../src/sass/miniui/_miniui.scss */
+.mini-xs-active .mini-visible-xs,
+.mini-sm-active .mini-visible-sm,
+.mini-md-active .mini-visible-md,
+.mini-lg-active .mini-visible-lg {
+  display: block !important;
+}
+
+/* line 665, ../../../src/sass/miniui/_miniui.scss */
+.mini-xs-active .mini-visible-xs-inline,
+.mini-sm-active .mini-visible-sm-inline,
+.mini-md-active .mini-visible-md-inline,
+.mini-lg-active .mini-visible-lg-inline {
+  display: inline !important;
+}
+
+/* line 672, ../../../src/sass/miniui/_miniui.scss */
+.mini-xs-active .mini-visible-xs-inline-block,
+.mini-sm-active .mini-visible-sm-inline-block,
+.mini-md-active .mini-visible-md-inline-block,
+.mini-lg-active .mini-visible-lg-inline-block {
+  display: inline-block !important;
+  *display: inline !important;
+  *zoom: 1 !important;
+}
+
+/* line 681, ../../../src/sass/miniui/_miniui.scss */
+.mini-sm-active table.mini-visible-sm,
+.mini-md-active table.mini-visible-md,
+.mini-lg-active table.mini-visible-lg {
+  display: table !important;
+}
+
+/* line 687, ../../../src/sass/miniui/_miniui.scss */
+.mini-xs-active tr.mini-visible-xs,
+.mini-sm-active tr.mini-visible-sm,
+.mini-md-active tr.mini-visible-md,
+.mini-lg-active tr.mini-visible-lg {
+  display: table-row !important;
+}
+
+/* line 694, ../../../src/sass/miniui/_miniui.scss */
+.mini-xs-active td.mini-visible-xs,
+.mini-sm-active td.mini-visible-sm,
+.mini-md-active td.mini-visible-md,
+.mini-lg-active td.mini-visible-lg {
+  display: table-cell !important;
+}
+
+/* line 703, ../../../src/sass/miniui/_miniui.scss */
+.mini-button {
+  padding: 0;
+  border: 1px solid #A9ACB5;
+  background: #EBEDF2 url(../../lib-base/miniui/themes/default/images/button/button.png) repeat-x 0 0;
+  font-size: 9pt;
+  font-family: Tahoma,Verdana,宋体;
+  line-height: 22px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  *zoom: 1;
+  cursor: pointer;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  vertical-align: middle;
+  outline: none;
+  position: relative;
+}
+
+/* line 725, ../../../src/sass/miniui/_miniui.scss */
+.mini-button {
+  color: #201F35;
+}
+
+/* line 729, ../../../src/sass/miniui/_miniui.scss */
+body a:hover.mini-button {
+  padding: 0;
+  border: 1px solid #A9ACB5;
+  background: #dde6fe url(../../lib-base/miniui/themes/default/images/button/hover.png) repeat-x 0 0;
+  text-decoration: none;
+}
+
+/* line 739, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-inner {
+  position: relative;
+  line-height: 16px;
+  padding: 4px 8px 3px 8px;
+  line-height: 17px\9;
+  display: inline-block;
+  padding: 3px 8px 2px 8px\9;
+  /*    +padding:3px 8px 2px 8px；*/
+  _padding: 2px 8px 2px 8px;
+  vertical-align: baseline;
+}
+
+/* line 760, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  min-width: 16px;
+  min-height: 16px;
+  overflow: hidden;
+  margin-top: -8px;
+  /*    +margin-top:-8px；*/
+  line-height: 16px;
+}
+
+/* line 776, ../../../src/sass/miniui/_miniui.scss */
+.mini-button .mini-button-icon {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* line 782, ../../../src/sass/miniui/_miniui.scss */
+.mini-button .mini-button-icon-text {
+  padding-left: 25px;
+}
+
+/* line 786, ../../../src/sass/miniui/_miniui.scss */
+.mini-button .mini-button-icon-only {
+  padding-left: 14px;
+}
+
+/* line 790, ../../../src/sass/miniui/_miniui.scss */
+.mini-button .mini-button-icon-only .mini-button-icon {
+  left: 4px;
+}
+
+/* line 796, ../../../src/sass/miniui/_miniui.scss */
+body .mini-button-plain {
+  background: transparent;
+  border: 0;
+  padding: 1px;
+}
+
+/* line 804, ../../../src/sass/miniui/_miniui.scss */
+body .mini-button-plain {
+  border: 1px solid transparent;
+  padding: 0;
+  *border: 0;
+  *padding: 1px;
+}
+
+/* line 813, ../../../src/sass/miniui/_miniui.scss */
+body .mini-button-pressed, body a:hover.mini-button-pressed,
+body .mini-button-checked, body a:hover.mini-button-checked,
+body a.mini-button-popup, body a:hover.mini-button-popup {
+  border: solid 1px  #888;
+  padding: 0px;
+  color: #3C3C3C;
+  background: #DBDDE2 url(../../lib-base/miniui/themes/default/images/button/pressed.png) repeat-x 0 0;
+  cursor: pointer;
+}
+
+/* line 826, ../../../src/sass/miniui/_miniui.scss */
+body a:hover.mini-button {
+  padding: 0px;
+  border: 1px solid #A9ACB5;
+}
+
+/* line 833, ../../../src/sass/miniui/_miniui.scss */
+body a.mini-button-disabled, body a:hover.mini-button-disabled {
+  border: 1px solid #ccc;
+  padding: 0px;
+  color: #777;
+  background: #F8F9FA url(../../lib-base/miniui/themes/default/images/button/disabled.png) repeat-x 0 0px;
+  cursor: default;
+}
+
+/* line 841, ../../../src/sass/miniui/_miniui.scss */
+body .mini-button-disabled * {
+  cursor: default;
+  opacity: .7;
+  -moz-opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+/* line 853, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-iconRight .mini-button-icon-text {
+  padding-left: 8px;
+  padding-right: 25px;
+}
+
+/* line 859, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-iconRight .mini-button-icon {
+  left: auto;
+  right: 5px;
+}
+
+/* line 864, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-iconTop .mini-button-icon-text {
+  padding-left: 8px;
+  padding-top: 22px;
+}
+
+/* line 869, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-iconTop .mini-button-icon {
+  left: 50%;
+  margin-left: -9px;
+  top: 2px;
+  margin-top: auto;
+}
+
+/* line 875, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-iconTop .mini-button-allow {
+  position: static;
+  display: block;
+  background-position: 3px 50%;
+  margin-top: 0;
+  margin: auto;
+  /*    +margin:0；*/
+}
+
+/* line 888, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-allow {
+  position: relative;
+  width: 14px;
+  height: 16px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+/* line 898, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-menu {
+  background: url(../../lib-base/miniui/themes/default/images/button/menu_arrow.png) no-repeat 0px 50%;
+}
+
+/* line 902, ../../../src/sass/miniui/_miniui.scss */
+.mini-button-split {
+  width: 18px;
+  background: url(../../lib-base/miniui/themes/default/images/button/split_arrow.png) no-repeat 0px 50%;
+}
+
+/* line 909, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkbox {
+  font-size: 9pt;
+  font-family: Tahoma,Verdana,宋体;
+  line-height: 22px;
+  position: relative;
+}
+
+/* line 916, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkbox label {
+  vertical-align: middle;
+}
+
+/* line 920, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkbox-check,
+.mini-checkbox-icon {
+  padding: 0;
+  margin: 0;
+  margin-right: 6px;
+  vertical-align: middle;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: url(../../lib-base/miniui/themes/default/images/icons/checkbox.gif) no-repeat 0 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* line 934, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkbox-checked .mini-checkbox-icon {
+  background-position: 0 -13px;
+}
+
+/* line 941, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkbox-check {
+  display: none;
+}
+
+/* line 945, ../../../src/sass/miniui/_miniui.scss */
+.mini-textbox {
+  width: 150px;
+  height: 24px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 960, ../../../src/sass/miniui/_miniui.scss */
+.mini-textbox-border {
+  background: white;
+  border: solid 1px #a5acb5;
+  width: auto;
+  height: 22px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* line 972, ../../../src/sass/miniui/_miniui.scss */
+.mini-textbox-input {
+  cursor: text;
+  background: none;
+  background: url(about:blank) no-repeat\0;
+  width: 100%;
+  height: 22px;
+  line-height: 20px;
+  font-family: Verdana;
+  font-size: 9pt;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  float: left;
+  _position: absolute;
+  _left: 2px;
+  _top: 0px;
+}
+
+/* line 994, ../../../src/sass/miniui/_miniui.scss */
+.mini-required .mini-textbox-border,
+.mini-required .mini-buttonedit-border {
+  background: #FFFFE6;
+}
+
+/* line 1003, ../../../src/sass/miniui/_miniui.scss */
+.mini-textbox-focus .mini-textbox-border {
+  border-color: #808891;
+}
+
+/* line 1009, ../../../src/sass/miniui/_miniui.scss */
+.mini-placeholder-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2px;
+  line-height: 17px;
+  padding-left: 2px;
+  color: #9a9a9a;
+  cursor: text;
+  white-space: nowrap;
+}
+
+/* line 1017, ../../../src/sass/miniui/_miniui.scss */
+.mini-textbox-disabled {
+  cursor: default;
+}
+
+/* line 1022, ../../../src/sass/miniui/_miniui.scss */
+body .mini-textbox-disabled .mini-textbox-border {
+  background: #f0f0f0;
+  color: #6D6D6D;
+  cursor: default;
+}
+
+/* line 1028, ../../../src/sass/miniui/_miniui.scss */
+body .mini-textarea {
+  height: 50px;
+}
+
+/* line 1032, ../../../src/sass/miniui/_miniui.scss */
+.mini-textarea .mini-textbox-border {
+  height: auto;
+  padding-left: 2px;
+  padding-right: 0px;
+}
+
+/* line 1036, ../../../src/sass/miniui/_miniui.scss */
+.mini-textarea .mini-textbox-input {
+  resize: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 1043, ../../../src/sass/miniui/_miniui.scss */
+.mini-textarea .mini-textbox-input {
+  overflow: auto;
+}
+
+/* line 1048, ../../../src/sass/miniui/_miniui.scss */
+.mini-error .mini-textbox-border {
+  margin-right: 18px;
+}
+
+/* line 1052, ../../../src/sass/miniui/_miniui.scss */
+body .mini-invalid .mini-textbox-border,
+body .mini-invalid .mini-buttonedit-border {
+  border: red 1px solid;
+}
+
+/* line 1059, ../../../src/sass/miniui/_miniui.scss */
+.mini-indent .mini-textbox-border,
+.mini-indent .mini-buttonedit-border {
+  margin-right: 18px;
+}
+
+/* line 1065, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit {
+  width: 150px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 1076, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-border {
+  background: white;
+  border: solid 1px #a5acb5;
+  width: auto;
+  height: 22px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-right: 24px;
+  padding-left: 4px;
+}
+
+/* line 1087, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-buttons {
+  clear: both;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/* line 1094, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-height .mini-buttonedit-buttons {
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+/* line 1101, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-input {
+  background: none;
+  background: url(about:blank) no-repeat\0;
+  border: 0;
+  height: 22px;
+  line-height: 22px;
+  font-family: Verdana;
+  font-size: 9pt;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  z-index: 1;
+  cursor: text;
+  width: 100%;
+  float: right;
+  _position: absolute;
+  _left: 2px;
+  _top: 0px;
+}
+
+/* line 1125, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit .mini-buttonedit-input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 1132, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit input::-ms-clear,
+.mini-textbox input::-ms-clear {
+  display: none;
+}
+
+/* line 1136, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-button, .mini-buttonedit-close {
+  border: 0px;
+  padding: 1px;
+  background: none;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-right: 1px;
+  display: inline-block;
+  z-index: 10;
+  vertical-align: top;
+  position: relative;
+}
+
+/* line 1151, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-close {
+  display: none;
+  background: url(../../lib-base/miniui/themes/default/images/buttonedit/close.gif) no-repeat 50% 50%;
+  width: 14px;
+}
+
+/* line 1158, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-button-hover,
+.mini-buttonedit-hover .mini-buttonedit-trigger {
+  border: 1px solid #ababab;
+  padding: 0;
+  background: #dde6fe url(../../lib-base/miniui/themes/default/images/buttonedit/hover.png) repeat-x 0 0;
+}
+
+/* line 1167, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-button, .mini-buttonedit-close {
+  border: 1px solid transparent;
+  padding: 0;
+  _border: 0px;
+  _padding: 1px;
+}
+
+/* line 1175, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-button-hover,
+.mini-buttonedit-hover .mini-buttonedit-trigger {
+  border: 1px solid #ababab;
+  padding: 0;
+  _border: 1px solid #ababab;
+  _padding: 0;
+}
+
+/* line 1186, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-button-pressed,
+.mini-buttonedit-popup .mini-buttonedit-trigger {
+  border: 1px solid #888;
+  padding: 0;
+  background: #DBDDE2 url(../../lib-base/miniui/themes/default/images/buttonedit/pressed.png) repeat-x 0 0;
+}
+
+/* line 1194, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-focus .mini-buttonedit-border,
+.mini-buttonedit-popup .mini-buttonedit-border {
+  border-color: #808891;
+}
+
+/* line 1199, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-hover,
+.mini-buttonedit-hover .mini-buttonedit-input {
+  cursor: pointer;
+}
+
+/* line 1205, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-disabled {
+  cursor: default;
+}
+
+/* line 1210, ../../../src/sass/miniui/_miniui.scss */
+body .mini-buttonedit-disabled .mini-buttonedit-border,
+body .mini-buttonedit-disabled .mini-buttonedit-input {
+  background: #f0f0f0;
+  color: #6D6D6D;
+  cursor: default;
+}
+
+/* line 1215, ../../../src/sass/miniui/_miniui.scss */
+body .mini-buttonedit-disabled .mini-buttonedit-button {
+  cursor: default;
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+/* line 1219, ../../../src/sass/miniui/_miniui.scss */
+body .mini-buttonedit-disabled .mini-buttonedit-up,
+body .mini-buttonedit-disabled .mini-buttonedit-down {
+  cursor: default;
+}
+
+/* line 1227, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-empty .mini-buttonedit-input {
+  color: #B1B1B8;
+}
+
+/* line 1232, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  background: url(../../lib-base/miniui/themes/default/images/buttonedit/icon1.gif) no-repeat 50% 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+/* line 1245, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit .mini-buttonedit-icon {
+  background-position: 50% 50%;
+}
+
+/* line 1249, ../../../src/sass/miniui/_miniui.scss */
+.mini-popupedit .mini-buttonedit-trigger .mini-buttonedit-icon {
+  background: url(../../lib-base/miniui/themes/default/images/buttonedit/icon2.gif) no-repeat 3px 1px;
+}
+
+/* line 1253, ../../../src/sass/miniui/_miniui.scss */
+.mini-datepicker .mini-buttonedit-trigger .mini-buttonedit-icon {
+  background: url(../../lib-base/miniui/themes/default/images/datepicker/date.gif) no-repeat 50% 2px;
+}
+
+/* line 1263, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-up, .mini-buttonedit-down {
+  overflow: hidden;
+  height: 50%;
+  display: block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* line 1271, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-up span, .mini-buttonedit-down span {
+  background: url(../../lib-base/miniui/themes/default/images/buttonedit/up.gif) no-repeat 50% 3px;
+  width: 16px;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+}
+
+/* line 1280, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-down span {
+  background: url(../../lib-base/miniui/themes/default/images/buttonedit/down.gif) no-repeat 50% 3px;
+}
+
+/* line 1284, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-button .mini-buttonedit-button-pressed {
+  border: 0;
+}
+
+/* line 1290, ../../../src/sass/miniui/_miniui.scss */
+.mini-filteredit .mini-buttonedit-icon {
+  background: url(../../lib-base/miniui/themes/default/images/buttonedit/filter.png) no-repeat 50% 0px;
+}
+
+/* line 1296, ../../../src/sass/miniui/_miniui.scss */
+input.mini-textbox,
+input.mini-buttonedit,
+input.mini-datepicker,
+input.mini-spinner,
+input.mini-timespinner,
+input.mini-combobox,
+input.mini-treeselect,
+input.mini-lookup,
+input.mini-htmlfile,
+input.mini-password,
+input.mini-checkbox,
+input.mini-textarea {
+  visibility: hidden;
+  border: 0;
+  padding: 0;
+  height: 21px;
+  width: 125px;
+}
+
+/* line 1315, ../../../src/sass/miniui/_miniui.scss */
+input.mini-textarea {
+  height: 50px;
+}
+
+/* line 1323, ../../../src/sass/miniui/_miniui.scss */
+.mini-error .mini-buttonedit-border {
+  margin-right: 18px;
+}
+
+/* line 1327, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel {
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+}
+
+/* line 1335, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-border {
+  border: 1px solid #999999;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 1342, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-viewport {
+  background: white;
+}
+
+/* line 1346, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel .mini-panel-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 1351, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-header {
+  width: auto;
+  overflow: hidden;
+  background: #edf1f5 url(../../lib-base/miniui/themes/default/images/panel/header.png) repeat-x 0 0px;
+  color: #201F35;
+  border-bottom: solid 1px #bbb;
+  cursor: default;
+  position: relative;
+  zoom: 1;
+}
+
+/* line 1364, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-header-inner {
+  padding: 5px 4px 5px 8px;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 1370, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel .mini-panel-title {
+  padding-top: 0px\9;
+  float: left;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+/* line 1377, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel .mini-panel-icon {
+  float: left;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 2px;
+  display: none;
+}
+
+/* line 1388, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-body {
+  position: relative;
+  padding: 5px;
+  text-align: left;
+  width: auto;
+  overflow: auto;
+  clear: both;
+}
+
+/* line 1402, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel .mini-tools {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* line 1408, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-toolbar {
+  clear: both;
+  border-bottom: solid 1px #C9C9C9;
+  background: #eff2f4;
+  width: auto;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  line-height: 18px;
+  zoom: 1;
+}
+
+/* line 1422, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-footer {
+  border-top: solid 1px #C9C9C9;
+  background: #eff2f4;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  line-height: 18px;
+  zoom: 1;
+}
+
+/* line 1434, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-collapse .mini-panel-header {
+  border-bottom: 0;
+}
+
+/* line 1438, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-collapse .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/tools/expand.gif) no-repeat 50% 50%;
+  _background-position: 50% 3px;
+}
+
+/* line 1444, ../../../src/sass/miniui/_miniui.scss */
+.mini-panel-titleclick .mini-panel-header {
+  cursor: pointer;
+}
+
+/* line 1450, ../../../src/sass/miniui/_miniui.scss */
+.mini-window {
+  position: absolute;
+}
+
+/* line 1454, ../../../src/sass/miniui/_miniui.scss */
+.mini-window .mini-panel-header {
+  background: #E3E6E8 url(../../lib-base/miniui/themes/default/images/window/header.png) repeat-x 0 0px;
+}
+
+/* line 1458, ../../../src/sass/miniui/_miniui.scss */
+.mini-window .mini-panel-footer {
+  background: #E3E6E8 url(../../lib-base/miniui/themes/default/images/window/footer.png) repeat-x 0 0px;
+}
+
+/* line 1462, ../../../src/sass/miniui/_miniui.scss */
+.mini-window-drag .mini-panel-header {
+  cursor: move;
+}
+
+/* line 1467, ../../../src/sass/miniui/_miniui.scss */
+.mini-window-max {
+  position: fixed !important;
+}
+
+/* line 1473, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-content {
+  padding: 5px;
+  cursor: default;
+}
+
+/* line 1481, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-content td {
+  font-size: 12px;
+}
+
+/* line 1485, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-content-text {
+  padding: 8px;
+  padding-right: 40px;
+  padding-left: 0px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* line 1491, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-buttons {
+  text-align: center;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 1498, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-info,
+.mini-messagebox-warning,
+.mini-messagebox-question,
+.mini-messagebox-error,
+.mini-messagebox-waiting {
+  width: 40px;
+  height: 40px;
+  background: url(../../lib-base/miniui/themes/default/images/messagebox/icon-info.gif) no-repeat 50% 50%;
+}
+
+/* line 1508, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-warning {
+  background: url(../../lib-base/miniui/themes/default/images/messagebox/icon-warning.gif) no-repeat 50% 50%;
+}
+
+/* line 1512, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-question {
+  background: url(../../lib-base/miniui/themes/default/images/messagebox/icon-question.gif) no-repeat 50% 50%;
+}
+
+/* line 1516, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-error {
+  background: url(../../lib-base/miniui/themes/default/images/messagebox/icon-error.gif) no-repeat 50% 50%;
+}
+
+/* line 1520, ../../../src/sass/miniui/_miniui.scss */
+.mini-messagebox-waiting {
+  width: 40px;
+  height: 30px;
+  background: url(../../lib-base/miniui/themes/default/images/messagebox/loading.gif) no-repeat 50% 50%;
+}
+
+/* line 1535, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar {
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  overflow: hidden;
+}
+
+/* line 1541, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-border {
+  border: 1px solid #999999;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 1548, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-group {
+  overflow: hidden;
+  height: auto;
+  border-bottom: solid 1px #a7abb0;
+  position: relative;
+}
+
+/* line 1555, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-groupHeader {
+  position: relative;
+  background: #edf1f5 url(../../lib-base/miniui/themes/default/images/navbar/header.png) repeat-x 0 0;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 16px;
+  padding: 5px 25px 5px 4px;
+  font-weight: bold;
+  *zoom: 1;
+}
+
+/* line 1566, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-groupTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+  padding-left: 4px;
+  width: 80%;
+}
+
+/* line 1574, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-groupHeader .mini-tools {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* line 1579, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-groupBody {
+  clear: both;
+  border-top: solid 1px #a7abb0;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* line 1594, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar .mini-outlookbar-icon {
+  float: left;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+/* line 1606, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-collapse .mini-outlookbar-groupBody {
+  display: none;
+}
+
+/* line 1610, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-lastGroup {
+  border-bottom: 0;
+}
+
+/* line 1614, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-lastGroup .mini-outlookbar-groupHeader {
+  border-bottom: 0;
+}
+
+/* line 1619, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar .mini-outlookbar-expand .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/tools/expand.gif) no-repeat 50% 50%;
+}
+
+/* line 1632, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view2 .mini-outlookbar-border {
+  border: 0;
+}
+
+/* line 1636, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view2 .mini-outlookbar-group {
+  border: 0;
+  margin-bottom: 1px;
+}
+
+/* line 1641, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view2 .mini-outlookbar-groupHeader {
+  border: solid 1px #a7abb0;
+}
+
+/* line 1645, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view2 .mini-outlookbar-groupBody {
+  border: 0;
+  background: #fff;
+}
+
+/* line 1650, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view2 .mini-outlookbar-lastGroup {
+  margin: 0;
+}
+
+/* line 1654, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view2 .mini-outlookbar-groupBody {
+  background: #fff;
+  border: solid 1px #ccc;
+  border-top: 0;
+}
+
+/* line 1663, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view3 .mini-outlookbar-border {
+  border: 0;
+}
+
+/* line 1667, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view3 .mini-outlookbar-group {
+  border: solid 1px #a7abb0;
+  margin-bottom: 8px;
+}
+
+/* line 1676, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-view3 .mini-outlookbar-lastGroup {
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+/* line 1683, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookbar-overflow,
+.mini-outlookbar-overflow .mini-tree,
+.mini-outlookbar-overflow .mini-menu {
+  overflow: hidden;
+}
+
+/* line 1692, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookmenu .mini-menu-border {
+  overflow-y: auto;
+}
+
+/* line 1696, ../../../src/sass/miniui/_miniui.scss */
+.mini-outlookmenu .mini-menu {
+  background: none;
+}
+
+/* line 1701, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 1707, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-table {
+  border-collapse: collapse;
+  border-collapse: separate;
+  position: relative;
+}
+
+/* line 1715, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-scrollCt {
+  position: relative;
+  border-bottom: solid 1px #A8A8A8;
+  border: solid 1px #999999;
+  background: #f0f0f0 repeat-x 0 0;
+  zoom: 1;
+}
+
+/* line 1723, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-headers {
+  width: auto;
+  padding: 0;
+  position: relative;
+  margin-bottom: -1px;
+  *zoom: 1;
+}
+
+/* line 1734, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom .mini-tabs-headers {
+  border-top: 0;
+  border-bottom-width: 1px;
+  padding-top: 0;
+  padding-bottom: 2px;
+}
+
+/* line 1738, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tabs-plain .mini-tabs-scrollCt {
+  background: none;
+  border-left: 0;
+  border-top-width: 0;
+  border-right: 0;
+}
+
+/* line 1742, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tabs-plain .mini-tabs-headers {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+/* line 1747, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt {
+  border-bottom-width: 0;
+  border-top-width: 1px;
+}
+
+/* line 1754, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-top .mini-tabs-headers,
+.mini-tabs-position-bottom .mini-tabs-headers {
+  width: auto;
+  overflow: hidden;
+}
+
+/* line 1762, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-top .mini-tabs-header {
+  margin-top: 2px;
+}
+
+/* line 1766, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-bottom .mini-tabs-header {
+  margin-bottom: 2px;
+}
+
+/* line 1771, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-top .mini-tabs-plain .mini-tabs-header {
+  margin-top: 0px;
+}
+
+/* line 1775, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-header {
+  margin-bottom: 0px;
+}
+
+/* line 1784, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-body {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+}
+
+/* line 1790, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-hideOverflow {
+  overflow: hidden;
+}
+
+/* line 1795, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-bodys {
+  position: relative;
+  border: solid 1px #999999;
+  border-top: 0;
+  background: white;
+  padding: 5px;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* line 1807, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header {
+  width: 100%;
+  border-collapse: collapse;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 1816, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header2 {
+  margin-bottom: 1px;
+}
+
+/* line 1820, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header2 .mini-tabs-firstSpace,
+.mini-tabs-header2 .mini-tabs-lastSpace {
+  border-bottom: 1px solid transparent;
+  _border-color: tomato;
+  _filter: chroma(color=tomato);
+}
+
+/* line 1827, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-space {
+  width: 3px;
+  border-bottom: solid 1px #999999;
+}
+
+/* line 1832, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-space div {
+  height: 1px;
+  width: 3px;
+  overflow: hidden;
+}
+
+/* line 1835, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-space2 {
+  width: 3px;
+  border-bottom: solid 1px #999999;
+}
+
+/* line 1840, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-space2 div {
+  height: 3px;
+  width: 3px;
+  overflow: hidden;
+}
+
+/* line 1844, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab {
+  background: #EBEBEE url(../../lib-base/miniui/themes/default/images/tabs/tab.png) repeat-x 0 0;
+  color: #201F35;
+  border: 1px solid #999999;
+  color: black;
+  font: 9pt Tahoma;
+  padding: 3px 10px 3px 10px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* line 1856, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab-hover {
+  background: #E1E8FD url(../../lib-base/miniui/themes/default/images/tabs/hover.png) repeat-x 0 0;
+}
+
+/* line 1860, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab-active {
+  border-bottom: solid 1px white;
+  background: white;
+  cursor: default;
+  font-weight: bold;
+}
+
+/* line 1867, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab-body {
+  position: relative;
+}
+
+/* line 1871, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab-text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 16px;
+  padding: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* line 1880, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-plain .mini-tab-text {
+  line-height: 18px;
+}
+
+/* line 1884, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab .mini-tab-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background-position: 50% 50%;
+}
+
+/* line 1892, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab-close {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  vertical-align: top;
+  margin-top: 2px;
+  background: url(../../lib-base/miniui/themes/default/images/tabs/close.gif) no-repeat 3px 3px;
+  cursor: pointer;
+  opacity: .6;
+  filter: alpha(opacity=60);
+}
+
+/* line 1905, ../../../src/sass/miniui/_miniui.scss */
+.mini-tab-close-hover {
+  background-color: #aaa;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 1913, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom {
+  width: auto;
+  top: -1px;
+}
+
+/* line 1920, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom .mini-tabs-space,
+.mini-tabs-header-bottom .mini-tabs-space2 {
+  border: 0;
+  border-top: 1px solid #999999;
+}
+
+/* line 1930, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom .mini-tabs-bodys {
+  border: solid 1px #999999;
+  border-bottom: 0;
+}
+
+/* line 1935, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom .mini-tab-active {
+  border-top: solid 1px white;
+  border-bottom: solid 1px #999999;
+}
+
+/* line 1941, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-bottom .mini-tabs-header2 {
+  margin: 0px;
+  margin-top: 1px;
+}
+
+/* line 1946, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom .mini-tabs-header2 .mini-tabs-firstSpace,
+.mini-tabs-header-bottom .mini-tabs-header2 .mini-tabs-lastSpace {
+  border-top: 1px solid transparent;
+  _border-color: tomato;
+  _filter: chroma(color=tomato);
+}
+
+/* line 1954, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-body-bottom {
+  border: solid 1px #999999;
+  border-bottom: 0;
+}
+
+/* line 1961, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-header,
+.mini-tabs-header-right .mini-tabs-header {
+  min-width: 75px;
+}
+
+/* line 1967, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left {
+  width: auto;
+}
+
+/* line 1971, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-space,
+.mini-tabs-header-left .mini-tabs-space2 {
+  border: 0;
+  border-right: 1px solid #999999;
+}
+
+/* line 1977, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-space div {
+  height: 3px;
+  width: 1px;
+}
+
+/* line 1980, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-space2 div {
+  height: 3px;
+  width: 3px;
+}
+
+/* line 1983, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-headers {
+  vertical-align: top;
+  text-align: left;
+  padding: 0;
+  padding-left: 5px;
+}
+
+/* line 1990, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-header {
+  width: auto;
+}
+
+/* line 1994, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tab-active {
+  border: solid 1px #999999;
+  border-right: solid 1px white;
+}
+
+/* line 2000, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-left .mini-tabs-header2 {
+  margin: 0px;
+  padding-right: 1px;
+}
+
+/* line 2005, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tabs-header2 .mini-tabs-firstSpace,
+.mini-tabs-header-left .mini-tabs-header2 .mini-tabs-lastSpace {
+  border-right: 1px solid transparent;
+  _border-color: tomato;
+  _filter: chroma(color=tomato);
+}
+
+/* line 2014, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-body-left {
+  border: solid 1px #999999;
+  border-left: 0;
+}
+
+/* line 2021, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right {
+  width: auto;
+}
+
+/* line 2025, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tabs-space,
+.mini-tabs-header-right .mini-tabs-space2 {
+  border: 0;
+  border-left: 1px solid #999999;
+}
+
+/* line 2031, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tabs-space div {
+  height: 2px;
+  width: 2px;
+}
+
+/* line 2034, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tabs-space2 div {
+  height: 2px;
+  width: 2px;
+}
+
+/* line 2037, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tabs-headers {
+  vertical-align: top;
+  text-align: left;
+  padding: 0;
+  padding-right: 5px;
+}
+
+/* line 2044, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tabs-header {
+  width: auto;
+}
+
+/* line 2047, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tabs-bodys {
+  border: solid 1px #999999;
+  border-right: 0;
+}
+
+/* line 2052, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tab-active {
+  border: solid 1px #999999;
+  border-left: solid 1px white;
+}
+
+/* line 2058, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-right .mini-tabs-header2 {
+  margin: 0px;
+  padding-left: 1px;
+}
+
+/* line 2063, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-position-right .mini-tabs-header2 .mini-tabs-firstSpace,
+.mini-tabs-position-right .mini-tabs-header2 .mini-tabs-lastSpace {
+  border-left: 1px solid transparent;
+  _border-color: tomato;
+  _filter: chroma(color=tomato);
+}
+
+/* line 2070, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-body-right {
+  border: solid 1px #999999;
+  border-right: 0;
+}
+
+/* line 2078, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-buttons {
+  position: absolute;
+  padding-right: 3px;
+  top: 0px;
+  z-index: 1000;
+  right: 0;
+}
+
+/* line 2084, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-nav {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  z-index: 1000;
+  padding-left: 6px;
+  padding-right: 2px;
+  display: none;
+}
+
+/* line 2091, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-leftnav {
+  display: none;
+  padding-left: 6px;
+  padding-right: 2px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  z-index: 1000;
+}
+
+/* line 2101, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-tabmenu {
+  background: #ebebee url(../../lib-base/miniui/themes/default/images/tabs/down.gif) no-repeat 50% 50%;
+  display: none;
+  min-width: 16px;
+  min-height: 16px;
+  position: absolute;
+  top: 4px;
+  border: 1px solid #adadad;
+  z-index: 1000;
+}
+
+/* line 2110, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-leftButton, .mini-tabs-rightButton {
+  border: solid 1px #adadad;
+  background: #EBEBEE url(../../lib-base/miniui/themes/default/images/tabs/allow_left.gif) no-repeat 50% 50%;
+  min-width: 16px;
+  min-height: 16px;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* line 2119, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-rightButton {
+  background: #EBEBEE url(../../lib-base/miniui/themes/default/images/tabs/allow_right.gif) no-repeat 50% 50%;
+}
+
+/* line 2123, ../../../src/sass/miniui/_miniui.scss */
+a:hover.mini-tabs-leftButton, a:hover.mini-tabs-rightButton {
+  background-color: #E1E8FD;
+}
+
+/* line 2130, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-top .mini-tab {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 2135, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-bottom .mini-tab {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2140, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-left .mini-tab {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 2145, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs-header-right .mini-tab {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 2152, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter {
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+}
+
+/* line 2161, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-border {
+  border: solid 1px #8C8C8C;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 2167, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane {
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2175, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane1 {
+  border-width: 0px;
+  border-color: #8C8C8C;
+  border-style: solid;
+  border-right: solid 1px #8C8C8C;
+}
+
+/* line 2182, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane2 {
+  border-width: 0px;
+  border-color: #8C8C8C;
+  border-style: solid;
+  border-left: solid 1px #8C8C8C;
+}
+
+/* line 2188, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler {
+  cursor: w-resize;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+/* line 2198, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-nodrag {
+  cursor: default;
+}
+
+/* line 2203, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler-buttons {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  top: 50%;
+  width: 100%;
+  overflow: visible;
+}
+
+/* line 2211, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-resize-button {
+  width: 100%;
+  height: 18px;
+  display: block;
+  background: url(../../lib-base/miniui/themes/default/images/splitter/resize.gif) no-repeat 50% 50%;
+}
+
+/* line 2218, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane1-button, .mini-splitter-pane2-button {
+  overflow: hidden;
+  width: 100%;
+  height: 35px;
+  display: block;
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-left.gif) no-repeat 50% 50%;
+  cursor: pointer;
+}
+
+/* line 2228, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane2-button {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-right.gif) no-repeat 50% 50%;
+}
+
+/* line 2233, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane1-vertical {
+  border: 0;
+  border-bottom: solid 1px #8C8C8C;
+}
+
+/* line 2238, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-pane2-vertical {
+  border: 0;
+  border-top: solid 1px #8C8C8C;
+}
+
+/* line 2244, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler-vertical {
+  cursor: n-resize;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+}
+
+/* line 2252, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler-vertical .mini-splitter-handler-buttons {
+  height: 6px;
+  width: auto;
+  top: 0px;
+  left: 50%;
+}
+
+/* line 2257, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler-vertical .mini-splitter-pane1-button,
+.mini-splitter-handler-vertical .mini-splitter-pane2-button {
+  display: inline-block;
+  width: 35px;
+  height: 5px;
+  zoom: 1;
+  float: left;
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-top.gif) no-repeat 0px 0px;
+}
+
+/* line 2264, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler-vertical .mini-splitter-pane2-button {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-bottom.gif) no-repeat 0px 0px;
+}
+
+/* line 2268, ../../../src/sass/miniui/_miniui.scss */
+.mini-splitter-handler-vertical .mini-splitter-resize-button {
+  display: inline-block;
+  width: 18px;
+  height: 5px;
+  background: url(../../lib-base/miniui/themes/default/images/splitter/resize_h.gif) no-repeat 50% 50%;
+}
+
+/* line 2274, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout {
+  width: 500px;
+  height: 250px;
+  overflow: hidden;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+}
+
+/* line 2283, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-border {
+  position: relative;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #999999;
+}
+
+/* line 2293, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split {
+  cursor: w-resize;
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 2303, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-north, .mini-layout-split-south {
+  cursor: n-resize;
+}
+
+/* line 2307, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-nodrag {
+  cursor: default;
+}
+
+/* line 2312, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region {
+  border: 1px solid #A8A8A8;
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2322, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-north {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* line 2328, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-south {
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* line 2334, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-west {
+  border-left: 0;
+}
+
+/* line 2338, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-east {
+  border-right: 0;
+}
+
+/* line 2343, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-header {
+  font-weight: bold;
+  line-height: 26px;
+  background: #edf1f5 url(../../lib-base/miniui/themes/default/images/layout/header.png) repeat-x 0 0;
+  border-bottom: solid 1px #a7abb0;
+  cursor: default;
+  overflow: hidden;
+  height: 26px;
+  padding-left: 6px;
+}
+
+/* line 2354, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-title {
+  float: left;
+  font-weight: bold;
+}
+
+/* line 2359, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-icon {
+  float: left;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-top: 3px;
+}
+
+/* line 2369, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-body {
+  overflow: auto;
+  position: relative;
+}
+
+/* line 2375, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy {
+  background: #e9edf1;
+  border: solid 1px #A8A8A8;
+  cursor: default;
+  overflow: hidden;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  padding-left: 6px;
+  position: absolute;
+  z-index: 100;
+  left: -500px;
+  top: -500px;
+}
+
+/* line 2389, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-hover {
+  background: #f1f5f6;
+}
+
+/* line 2394, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-east .mini-layout-region-title,
+.mini-layout-proxy-east .mini-layout-region-icon,
+.mini-layout-proxy-west .mini-layout-region-title,
+.mini-layout-proxy-west .mini-layout-region-icon {
+  display: none;
+}
+
+/* line 2414, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-header .mini-tools,
+.mini-layout-proxy .mini-tools {
+  right: 8px;
+}
+
+/* line 2419, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-west .mini-layout-region-header .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/west.gif) no-repeat 50% 50%;
+}
+
+/* line 2423, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-east .mini-layout-region-header .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/east.gif) no-repeat 50% 50%;
+}
+
+/* line 2427, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-north .mini-layout-region-header .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/north.gif) no-repeat 50% 50%;
+}
+
+/* line 2431, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-region-south .mini-layout-region-header .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/south.gif) no-repeat 50% 50%;
+}
+
+/* line 2436, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-west .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/east.gif) no-repeat 50% 50%;
+}
+
+/* line 2440, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-east .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/west.gif) no-repeat 50% 50%;
+}
+
+/* line 2444, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-north .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/south.gif) no-repeat 50% 50%;
+}
+
+/* line 2448, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-south .mini-tools-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/layout/north.gif) no-repeat 50% 50%;
+}
+
+/* line 2452, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-popup {
+  background: white;
+  z-index: 101;
+}
+
+/* line 2457, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-maxZIndex {
+  z-index: 200;
+}
+
+/* line 2462, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-spliticon {
+  width: 5px;
+  height: 35px;
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-left.gif) no-repeat 50% 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -17px;
+  cursor: pointer;
+}
+
+/* line 2473, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-east .mini-layout-spliticon {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-right.gif) no-repeat 50% 50%;
+}
+
+/* line 2477, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-north .mini-layout-spliticon,
+.mini-layout-split-south .mini-layout-spliticon {
+  width: 35px;
+  height: 5px;
+  left: 50%;
+  top: 0;
+  margin-left: -17px;
+  margin-top: 0px;
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-top.gif) no-repeat 50% 50%;
+}
+
+/* line 2483, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-south .mini-layout-spliticon {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-bottom.gif) no-repeat 50% 50%;
+}
+
+/* line 2489, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-west .mini-layout-spliticon-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-right.gif) no-repeat 50% 50%;
+}
+
+/* line 2493, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-east .mini-layout-spliticon-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-left.gif) no-repeat 50% 50%;
+}
+
+/* line 2497, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-north .mini-layout-spliticon-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-bottom.gif) no-repeat 50% 50%;
+}
+
+/* line 2501, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-split-south .mini-layout-spliticon-collapse {
+  background: url(../../lib-base/miniui/themes/default/images/splitter/mini-top.gif) no-repeat 50% 50%;
+}
+
+/* line 2507, ../../../src/sass/miniui/_miniui.scss */
+.mini-layout-proxy-text {
+  position: relative;
+  top: 30px;
+  left: 0px;
+  width: 200px;
+  overflow: hidden;
+  line-height: 20px;
+  transform-origin: 10px 10px;
+  transform: rotate(90deg);
+}
+
+/* line 2520, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu {
+  background: white;
+  color: #201F35;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  border-collapse: collapse;
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+/* line 2532, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-border {
+  border: 1px solid #999999;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 2536, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-inner {
+  padding: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 2540, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-topArrow, .mini-menu-bottomArrow {
+  height: 9px;
+  overflow: hidden;
+  display: none;
+  background: url(../../lib-base/miniui/themes/default/images/menu/top-arrow.gif) no-repeat 50% 2px;
+}
+
+/* line 2545, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-bottomArrow {
+  background: url(../../lib-base/miniui/themes/default/images/menu/bottom-arrow.gif) no-repeat 50% 2px;
+}
+
+/* line 2549, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-float {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 2554, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem {
+  line-height: 20px;
+  height: auto;
+  width: auto;
+  position: relative;
+  cursor: default;
+  border: 0;
+  padding: 1px;
+}
+
+/* line 2568, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-hover {
+  padding: 0px;
+  border: solid 1px #9a9a9a;
+  background: #E3EBFF url(../../lib-base/miniui/themes/default/images/menu/item.png) repeat-x 0 0;
+}
+
+/* line 2574, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-popup {
+  padding: 0px;
+  border: solid 1px #9a9a9a;
+  background: #E3EBFF url(../../lib-base/miniui/themes/default/images/menu/item.png) repeat-x 0 0;
+}
+
+/* line 2580, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-selected {
+  padding: 0px;
+  border: solid 1px #9a9a9a;
+  background: #DBDDE2 url(../../lib-base/miniui/themes/default/images/menu/pressed.png) repeat-x 0 0;
+}
+
+/* line 2588, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem {
+  border: 1px solid transparent;
+  padding: 0;
+  *border: 0;
+  *padding: 1px;
+}
+
+/* line 2596, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-hover, .mini-menu-popup, .mini-menuitem-selected {
+  border: solid 1px #9a9a9a;
+  padding: 0;
+  *border: solid 1px #9a9a9a;
+  *padding: 0px;
+}
+
+/* line 2606, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-inner {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 28px;
+}
+
+/* line 2612, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-text {
+  cursor: default;
+  color: #201F35;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+/* line 2623, ../../../src/sass/miniui/_miniui.scss */
+.mini-disabled .mini-menuitem-text {
+  opacity: .7;
+  -moz-opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+/* line 2629, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-text a {
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  text-decoration: none;
+  color: #201F35;
+}
+
+/* line 2636, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-text a:hover {
+  text-decoration: underline;
+}
+
+/* line 2640, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-icon, .mini-menuitem-allow {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  display: none;
+  /*    +height:18px；*/
+  /*    +top:0px；*/
+  _left: -25px;
+  _top: -3px;
+  _height: 18px;
+}
+
+/* line 2661, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem .mini-menuitem-icon {
+  _position: relative;
+  _left: 0;
+  _top: -2px;
+  /*    +position:relative;+left:0;+top:-2px；*/
+}
+
+/* line 2666, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem .mini-menuitem-icon {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* line 2670, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-allow {
+  left: auto;
+  right: 3px;
+  background: url(../../lib-base/miniui/themes/default/images/menu/arrow.png) no-repeat 8px 50%;
+}
+
+/* line 2676, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu .mini-menuitem-showcheck .mini-menuitem-icon {
+  background: none;
+}
+
+/* line 2680, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu .mini-menuitem-checked .mini-menuitem-icon {
+  background: url(../../lib-base/miniui/themes/default/images/menu/checked.gif) no-repeat 50% 6px;
+}
+
+/* line 2685, ../../../src/sass/miniui/_miniui.scss */
+body .mini-menuitem-icontop .mini-menuitem-inner {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  line-height: 14px;
+  margin-right: 10px;
+}
+
+/* line 2693, ../../../src/sass/miniui/_miniui.scss */
+body .mini-menuitem-icontop .mini-menuitem-text {
+  /*    +height:16px；*/
+}
+
+/* line 2697, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-icontop .mini-menuitem-icon {
+  position: static;
+  margin: auto;
+}
+
+/* line 2702, ../../../src/sass/miniui/_miniui.scss */
+.mini-menuitem-icontop .mini-menuitem-text {
+  padding: 0;
+  padding-top: 5px;
+}
+
+/* line 2709, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menu-border {
+  background: #F1F2F6 url(../../lib-base/miniui/themes/default/images/menu/hmenubg.png) repeat-x 0 0;
+}
+
+/* line 2713, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menu-inner {
+  margin: 0;
+  border: 0;
+  padding: 3px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 2723, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem {
+  float: left;
+  display: inline;
+}
+
+/* line 2728, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem-inner {
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 2px;
+  *padding-top: 2px;
+  *padding-bottom: 0px;
+  overflow: hidden;
+}
+
+/* line 2737, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem-icon,
+.mini-menu-horizontal .mini-menuitem-text,
+.mini-menu-horizontal .mini-menuitem-allow {
+  position: static;
+  float: left;
+  vertical-align: middle;
+}
+
+/* line 2745, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem-icon {
+  margin-top: 2px;
+}
+
+/* line 2749, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem-allow {
+  background: url(../../lib-base/miniui/themes/default/images/menu/hallow.gif) no-repeat 50% 50%;
+  /*    +background-position:50% 20%；*/
+  width: 10px;
+  height: 8px;
+  overflow: hidden;
+  margin-top: 7px;
+}
+
+/* line 2757, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menuitem-text {
+  padding: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  /*    +padding-top:0px；*/
+  /*    +padding-bottom:3px；*/
+  /*    +line-height:18px；*/
+}
+
+/* line 2767, ../../../src/sass/miniui/_miniui.scss */
+.mini-separator {
+  display: block;
+  border-top: solid 1px #9b9b9b;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  margin-left: 26px;
+}
+
+/* line 2776, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-separator {
+  float: left;
+  display: inline;
+  border: 0;
+  border-left: solid 1px #9b9b9b;
+  margin: 1px;
+  margin-top: 6px;
+  height: 12px;
+}
+
+/* line 2788, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-toolbar {
+  display: none;
+  float: right;
+}
+
+/* line 2793, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menu-toolbar {
+  display: none;
+}
+
+/* line 2797, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-horizontal .mini-menu-float {
+  float: left;
+}
+
+/* line 2802, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-overflow .mini-menu-float {
+  width: 20000px;
+}
+
+/* line 2808, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-overflow .mini-menu-topArrow,
+.mini-menu-overflow .mini-menu-bottomArrow {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 17px;
+  height: 20px;
+  z-index: 1000;
+  background: url("../../lib-base/miniui/themes/default/images/tabs/allow_left.gif") no-repeat scroll -1px 50%;
+}
+
+/* line 2817, ../../../src/sass/miniui/_miniui.scss */
+.mini-menu-overflow .mini-menu-bottomArrow {
+  left: auto;
+  right: 0;
+  background: url("../../lib-base/miniui/themes/default/images/tabs/allow_right.gif") no-repeat scroll -1px 50%;
+}
+
+/* line 2822, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar {
+  border: 1px solid #999999;
+  border-collapse: collapse;
+  border-collapse: separate;
+}
+
+/* line 2831, ../../../src/sass/miniui/_miniui.scss */
+body .mini-calendar td {
+  line-height: 14px;
+}
+
+/* line 2835, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-views {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 2840, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-view {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-collapse: separate;
+  display: table;
+}
+
+/* line 2849, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-daysheader td {
+  padding: 4px;
+  border-bottom: solid 1px #CFCFCF;
+  font-size: 9pt;
+  cursor: default;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 2859, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar td.mini-calendar-weeknumber {
+  border: 0;
+  font-size: 10px;
+  color: #BFBFBF;
+  cursor: default;
+}
+
+/* line 2866, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-days td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: default;
+}
+
+/* line 2876, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar .mini-calendar-weekend {
+  color: #C00000;
+}
+
+/* line 2880, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar .mini-calendar-othermonth {
+  color: #888888;
+}
+
+/* line 2883, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar .mini-calendar-disabled {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+/* line 2888, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-space {
+  width: 3px;
+}
+
+/* line 2892, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-bottom td {
+  height: 3px;
+}
+
+/* line 2896, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-date {
+  border: solid 1px white;
+}
+
+/* line 2901, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-header {
+  height: 25px;
+  text-align: center;
+  background: #E7EBEF url(../../lib-base/miniui/themes/default/images/calendar/header.png) repeat-x 0 0;
+  border-bottom: solid 1px #a7abb0;
+}
+
+/* line 2908, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-headerInner {
+  position: relative;
+  height: 100%;
+}
+
+/* line 2913, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-title {
+  line-height: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+}
+
+/* line 2922, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-prev, .mini-calendar-next {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  overflow: hidden;
+}
+
+/* line 2928, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-next {
+  left: auto;
+  right: 8px;
+}
+
+/* line 2932, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-yearPrev, .mini-calendar-yearNext,
+.mini-calendar-monthPrev, .mini-calendar-monthNext {
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  width: 11px;
+  height: 12px;
+  overflow: hidden;
+  background: url(../../lib-base/miniui/themes/default/images/calendar/prev.gif) no-repeat 50% 3px;
+}
+
+/* line 2939, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-yearNext {
+  margin: 0;
+  margin-left: 8px;
+  background: url(../../lib-base/miniui/themes/default/images/calendar/next.gif) no-repeat 50% 3px;
+}
+
+/* line 2945, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-monthPrev {
+  background: url(../../lib-base/miniui/themes/default/images/calendar/months.gif) no-repeat 0 0;
+}
+
+/* line 2949, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-monthNext {
+  margin: 0;
+  margin-left: 8px;
+  background: url(../../lib-base/miniui/themes/default/images/calendar/months.gif) no-repeat right 0;
+}
+
+/* line 2956, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-footer {
+  padding: 4px;
+  padding-bottom: 5px;
+  background: #efefef;
+  border-top: solid 1px #c9c9c9;
+  text-align: center;
+}
+
+/* line 2965, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu .mini-calendar-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 4px;
+  padding-bottom: 5px;
+}
+
+/* line 2974, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-footerSpace {
+  display: inline-block;
+  width: 8px;
+}
+
+/* line 2979, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-tadayButton, .mini-calendar-clearButton,
+.mini-calendar-okButton, .mini-calendar-cancelButton {
+  border: 1px solid #A9ACB5;
+  background: #EBEDF2 url(../../lib-base/miniui/themes/default/images/calendar/button.png) repeat-x 0 0;
+  color: #201F35;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 52px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* line 2998, ../../../src/sass/miniui/_miniui.scss */
+body a:hover.mini-calendar-tadayButton, body a:hover.mini-calendar-clearButton,
+body a:hover.mini-calendar-okButton, body a:hover.mini-calendar-cancelButton {
+  text-decoration: none;
+}
+
+/* line 3008, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-okButton, .mini-calendar-cancelButton {
+  line-height: 14px;
+}
+
+/* line 3012, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar .mini-calendar-today {
+  border: 1px solid #C00000;
+}
+
+/* line 3016, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar .mini-calendar-selected {
+  color: black;
+  background: #e2ecf7;
+  border: solid 1px #999999;
+}
+
+/* line 3023, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu {
+  width: 250px;
+  border: #9f9f9f 1px solid;
+  background: white;
+  position: absolute;
+  z-index: 10000000;
+  overflow: hidden;
+}
+
+/* line 3032, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-months {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 0px;
+  height: 70px;
+}
+
+/* line 3040, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-month {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 48px;
+  height: 22px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+  border: solid 1px white;
+  outline: none;
+  margin-bottom: 2px;
+}
+
+/* line 3054, ../../../src/sass/miniui/_miniui.scss */
+a:hover.mini-calendar-menu-month {
+  background: #e5e5d5;
+  border: solid 1px #d6d6d5;
+}
+
+/* line 3059, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-years {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 15px;
+  padding-right: 13px;
+  position: relative;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* line 3070, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-year {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 36px;
+  height: 21px;
+  margin-bottom: 2px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+  border: solid 1px white;
+  padding: 1px;
+}
+
+/* line 3084, ../../../src/sass/miniui/_miniui.scss */
+a:hover.mini-calendar-menu-year {
+  background: #e5e5d5;
+  border: solid 1px #d6d6d5;
+}
+
+/* line 3090, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-prevYear,
+.mini-calendar-menu-nextYear {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 14px;
+  height: 15px;
+  cursor: pointer;
+  background: url(../../lib-base/miniui/themes/default/images/calendar/months.gif) no-repeat 0 50%;
+}
+
+/* line 3100, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-nextYear {
+  left: auto;
+  right: 0;
+  background: url(../../lib-base/miniui/themes/default/images/calendar/months.gif) no-repeat right 50%;
+}
+
+/* line 3105, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-menu-selected, a:hover.mini-calendar-menu-selected {
+  color: #333;
+  background: #e2ecf7;
+  border: solid 1px #999999;
+}
+
+/* line 3113, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-timespinner {
+  width: 85px;
+  display: inline-block;
+  float: left;
+}
+
+/* line 3120, ../../../src/sass/miniui/_miniui.scss */
+.mini-calendar-hastime {
+  text-align: right;
+}
+
+/* line 3124, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 3129, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-border {
+  border: 1px solid #999999;
+  overflow: hidden;
+  border-spacing: 1px;
+  background: white;
+}
+
+/* line 3136, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  overflow: hidden;
+  line-height: 18px;
+  cursor: default;
+  padding-left: 4px;
+  padding-right: 2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  text-align: left;
+}
+
+/* line 3150, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-showColumns .mini-listbox-header td {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* line 3156, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-showColumns .mini-listbox-view td {
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 0;
+  border-right: solid 1px #cfcfcf;
+  border-bottom: solid 1px #cfcfcf;
+}
+
+/* line 3165, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-header {
+  overflow: hidden;
+  background: #E7EBEF url(../../lib-base/miniui/themes/default/images/listbox/header.png) repeat-x 0 0;
+  border-bottom: solid 1px #A5ACB5;
+}
+
+/* line 3171, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-header td {
+  border-right: solid 1px #A5ACB5;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 18px;
+}
+
+/* line 3179, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-view {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+/* line 3185, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-items, .mini-listbox-headerInner {
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  border-collapse: separate;
+  display: table;
+}
+
+/* line 3194, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-showcolumns .mini-listbox-items,
+.mini-listbox-showcolumns .mini-listbox-headerInner {
+  table-layout: fixed !important;
+}
+
+/* line 3201, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox .mini-listbox-checkbox {
+  text-overflow: clip;
+  text-align: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+}
+
+/* line 3209, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox .mini-listbox-checkbox input {
+  width: 14px;
+  height: 14px;
+}
+
+/* line 3214, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-hideCheckBox .mini-listbox-checkbox {
+  display: none;
+  width: 0;
+}
+
+/* line 3220, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-item-hover {
+  background: #e2ecf7;
+}
+
+/* line 3223, ../../../src/sass/miniui/_miniui.scss */
+.mini-listbox-item-selected {
+  background: #ecedef;
+  color: Black;
+}
+
+/* line 3228, ../../../src/sass/miniui/_miniui.scss */
+.mini-error .mini-list-inner {
+  margin-right: 20px;
+}
+
+/* line 3235, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkboxlist {
+  overflow: hidden;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  position: relative;
+}
+
+/* line 3243, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkboxlist-item {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin-right: 10px;
+  cursor: default;
+}
+
+/* line 3251, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkboxlist table label {
+  padding-left: 4px;
+  line-height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 3258, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkboxlist input,
+.mini-radiobuttonlist input {
+  overflow: hidden;
+  vertical-align: middle;
+  /*    +vertical-align:bottom；*/
+  margin: 0;
+  padding: 0;
+}
+
+/* line 3270, ../../../src/sass/miniui/_miniui.scss */
+.mini-radiobuttonlist {
+  position: relative;
+  overflow: hidden;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+}
+
+/* line 3278, ../../../src/sass/miniui/_miniui.scss */
+.mini-radiobuttonlist-item {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin-right: 10px;
+}
+
+/* line 3285, ../../../src/sass/miniui/_miniui.scss */
+.mini-radiobuttonlist table label {
+  padding-left: 4px;
+  line-height: 18px;
+  display: inline-block;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  vertical-align: middle;
+}
+
+/* line 3294, ../../../src/sass/miniui/_miniui.scss */
+.mini-radiobuttonlist input {
+  overflow: hidden;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  *vertical-align: top;
+  *height: 14px;
+  /*    +vertical-align:bottom；*/
+  margin: 0;
+  padding: 0;
+}
+
+/* line 3311, ../../../src/sass/miniui/_miniui.scss */
+.mini-list-icon {
+  margin-right: 2px;
+  vertical-align: middle;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: url(../../lib-base/miniui/themes/default/images/icons/checkbox.gif) no-repeat 0 0;
+  cursor: pointer;
+}
+
+/* line 3322, ../../../src/sass/miniui/_miniui.scss */
+.mini-radiobuttonlist-item .mini-list-icon {
+  background: url(../../lib-base/miniui/themes/default/images/icons/radio.gif) no-repeat 0 0;
+}
+
+/* line 3327, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkboxlist-item-selected .mini-list-icon,
+.mini-radiobuttonlist-item-selected .mini-list-icon {
+  background-position: 0 -13px;
+}
+
+/* line 3334, ../../../src/sass/miniui/_miniui.scss */
+.mini-disabled .mini-checkboxlist-item {
+  color: gray;
+  cursor: default;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+/* line 3342, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip {
+  position: absolute;
+  z-index: 1030;
+  font-size: 12px;
+  line-height: 1.4;
+  display: none;
+}
+
+/* line 3350, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-inner {
+  padding: 3px 8px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: solid 1px #888;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* line 3360, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  overflow: hidden;
+  font-size: 0;
+  _border-left-style: dashed;
+  _border-right-style: dashed;
+}
+
+/* line 3374, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-left .mini-tooltip-arrow,
+.mini-tooltip-right .mini-tooltip-arrow {
+  _border-left-style: solid;
+  _border-right-style: solid;
+  _border-top-style: dashed;
+  _border-bottom-style: dashed;
+}
+
+/* line 3383, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+
+/* line 3388, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-right {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+
+/* line 3393, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-bottom {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+/* line 3397, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-left {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+
+/* line 3403, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-top .mini-tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #666;
+  border-width: 5px 5px 0;
+}
+
+/* line 3412, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-left .mini-tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-left-color: #666;
+  border-width: 5px 0 5px 5px;
+}
+
+/* line 3420, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-right .mini-tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-right-color: #888;
+  border-width: 5px 5px 5px 0;
+}
+
+/* line 3430, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-bottom .mini-tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #666;
+  border-width: 0 5px 5px;
+}
+
+/* line 3440, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-bottomleft {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+/* line 3445, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-bottomleft .mini-tooltip-arrow {
+  top: 0;
+  left: 5px;
+  border-bottom-color: #666;
+  border-width: 0 5px 5px;
+}
+
+/* line 3452, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-bottomright {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+/* line 3457, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-bottomright .mini-tooltip-arrow {
+  top: 0;
+  right: 5px;
+  border-bottom-color: #666;
+  border-width: 0 5px 5px;
+}
+
+/* line 3464, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-topleft {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+
+/* line 3468, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-topleft .mini-tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  border-top-color: #666;
+  border-width: 5px 5px 0;
+}
+
+/* line 3475, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-topright {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+
+/* line 3479, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-topright .mini-tooltip-arrow {
+  right: 5px;
+  bottom: 0;
+  border-top-color: #666;
+  border-width: 5px 5px 0;
+}
+
+/* line 3487, ../../../src/sass/miniui/_miniui.scss */
+.mini-tooltip-loading {
+  width: 16px;
+  height: 16px;
+  background: url(../../lib-base/miniui/themes/default/images/tooltip/wait.gif) no-repeat 50% 50%;
+}
+
+/* line 3494, ../../../src/sass/miniui/_miniui.scss */
+.mini-progressbar {
+  height: 22px;
+  width: 150px;
+  position: relative;
+}
+
+/* line 3500, ../../../src/sass/miniui/_miniui.scss */
+.mini-progressbar-border {
+  position: relative;
+  height: 20px;
+  border: 1px solid #a5acb5;
+}
+
+/* line 3508, ../../../src/sass/miniui/_miniui.scss */
+.mini-progressbar-bar {
+  background: #c3d3ff;
+  height: 100%;
+  width: 0;
+  text-align: center;
+  position: relative;
+}
+
+/* line 3516, ../../../src/sass/miniui/_miniui.scss */
+.mini-progressbar-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 20px;
+  color: #222;
+  font-size: 9pt;
+  font-family: Tahoma,Verdana,宋体;
+}
+
+/* line 3528, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid, .mini-datagrid {
+  display: none;
+}
+
+/* line 3532, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-viewport {
+  background: white;
+}
+
+/* line 3539, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columns {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 3547, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columns-view {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  width: 100%;
+}
+
+/* line 3551, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columns-view .mini-grid-table {
+  z-index: 100;
+}
+
+/* line 3556, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid .mini-grid-rows {
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  z-index: 0;
+}
+
+/* line 3560, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rows-view {
+  position: relative;
+  z-index: 9;
+  overflow: auto;
+  height: 100%;
+  width: auto;
+  _width: 100%;
+}
+
+/* line 3569, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rows-content {
+  *zoom: 1;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 3575, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-autoheight .mini-grid-rows-view,
+.mini-grid-hidden-y {
+  overflow-y: hidden;
+}
+
+/* line 3581, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-table {
+  position: relative;
+  text-align: left;
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+  height: 1px;
+}
+
+/* line 3591, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rowstable {
+  padding-bottom: 1px;
+}
+
+/* line 3595, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-cell, .mini-grid-headerCell,
+.mini-grid-filterCell, .mini-grid-summaryCell {
+  overflow: hidden;
+  padding: 0px;
+  border: #d2d2d2 1px solid;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  cursor: default;
+  text-align: left;
+  overflow: hidden;
+  _text-overflow: ellipsis;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana, 宋体;
+  line-height: 18px;
+}
+
+/* line 3621, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-cell-inner, .mini-grid-headerCell-inner {
+  padding: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+
+/* line 3636, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-cell-nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+/* line 3643, ../../../src/sass/miniui/_miniui.scss */
+body .mini-grid-headerCell-nowrap {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* line 3649, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-headerCell {
+  background: #E7EBEF url(../../lib-base/miniui/themes/default/images/grid/header.png) repeat-x 0 0;
+  border-right: #A5ACB5 1px solid;
+  border-bottom: #A5ACB5 1px solid;
+  overflow: visible;
+  padding: 0;
+}
+
+/* line 3657, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-headerCell-outer {
+  position: relative;
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+/* line 3663, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-headerCell-inner {
+  word-break: break-all;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  overflow: hidden;
+}
+
+/* line 3671, ../../../src/sass/miniui/_miniui.scss */
+.ie .mini-grid-headerCell-inner {
+  padding-top: 4px;
+  padding-bottom: 5px;
+}
+
+/* line 3681, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid .mini-grid-rightCell {
+  border-right-width: 1px;
+}
+
+/* line 3685, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-topRightCell {
+  background: #E7EBEF url(../../lib-base/miniui/themes/default/images/grid/header.png) repeat-x 0 0;
+  border-right: #A5ACB5 1px solid;
+  border-bottom: #A5ACB5 1px solid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20000px;
+  height: 100%;
+  z-index: 9;
+  margin-left: -2px;
+  margin-top: -1px;
+  _top: auto;
+  _bottom: -1px;
+}
+
+/* line 3697, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-scrollHeaderCell {
+  position: absolute;
+  left: 20000px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* line 3701, ../../../src/sass/miniui/_miniui.scss */
+body .mini-grid .mini-grid-cell-error {
+  background: #fee2f0;
+}
+
+/* line 3705, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-cell-dirty {
+  background: url(../../lib-base/miniui/themes/default/images/grid/dirty.gif) no-repeat right 4px;
+}
+
+/* line 3710, ../../../src/sass/miniui/_miniui.scss */
+body .mini-grid-deleteRow {
+  text-decoration: line-through;
+}
+
+/* line 3714, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-newRow {
+  background: #fefee9;
+}
+
+/* line 3718, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-emptyText {
+  padding: 15px;
+  text-align: left;
+  padding-left: 35px;
+}
+
+/* line 3727, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-groupCell {
+  height: 30px;
+  border-right: #d2d2d2 1px solid;
+  border-bottom: solid 2px #A5ACB5;
+  background: #fff;
+}
+
+/* line 3735, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-groupHeader {
+  position: relative;
+  height: 30px;
+  cursor: default;
+}
+
+/* line 3741, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-groupTitle {
+  color: #333;
+  font-family: Tahoma, Verdana, 宋体;
+  font-size: 9pt;
+  font-weight: bold;
+  padding: 4px;
+  padding-top: 5px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  padding-left: 23px;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+/* line 3760, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-group-ecicon {
+  position: absolute;
+  width: 20px;
+  height: 23px;
+  left: 0px;
+  top: 4px;
+  cursor: pointer;
+  background: url("../../lib-base/miniui/themes/default/images/grid/expand.gif") no-repeat scroll 4px 0px;
+}
+
+/* line 3772, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-group-collapse .mini-grid-group-ecicon {
+  background: url("../../lib-base/miniui/themes/default/images/grid/collapse.gif") no-repeat 3px 0px;
+}
+
+/* line 3777, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-groupHeader-collapsible {
+  cursor: pointer;
+}
+
+/* line 3787, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-detailRow {
+  background: #F7F7F8;
+  position: relative;
+  zoom: 1;
+}
+
+/* line 3791, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-detailCell {
+  position: relative;
+  zoom: 1;
+  padding: 8px 10px 10px;
+  border-right: #cfcfcf 1px solid;
+  border-bottom: #cfcfcf 1px solid;
+}
+
+/* line 3800, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-filterRow {
+  overflow: hidden;
+  background: #f6f6f6;
+  position: relative;
+  zoom: 1;
+  width: 100%;
+}
+
+/* line 3804, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-filterRow-view {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  width: 100%;
+}
+
+/* line 3808, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-filterCell {
+  border-right: 0;
+  padding: 2px;
+}
+
+/* line 3815, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-summaryRow {
+  overflow: hidden;
+  background: #f6f6f6;
+  position: relative;
+  zoom: 1;
+  width: 100%;
+}
+
+/* line 3820, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-summaryCell {
+  border-bottom-width: 0;
+  border-top-width: 1px;
+}
+
+/* line 3825, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-summaryRow-top .mini-grid-summaryCell {
+  border-bottom-width: 1px;
+  border-top-width: 0px;
+}
+
+/* line 3831, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-summaryRow-view {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  width: 100%;
+}
+
+/* line 3835, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-summaryCell {
+  line-height: 16px;
+  border-right: 0;
+  padding: 2px;
+}
+
+/* line 3844, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columns-lock {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 0px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* line 3849, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columns-lock .mini-grid-topRightCell {
+  display: none;
+}
+
+/* line 3853, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rows-lock {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  overflow: hidden;
+  width: 0px;
+  z-index: 10;
+}
+
+/* line 3857, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columns-lock, .mini-grid-rows-lock {
+  border-right: #d2d2d2 1px solid;
+}
+
+/* line 3861, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rows-lock .mini-grid-rows-content {
+  padding-bottom: 30px;
+}
+
+/* line 3865, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rows-lock .mini-grid-emptyText {
+  visibility: hidden;
+}
+
+/* line 3870, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rows-lock .mini-grid-table {
+  width: 0;
+}
+
+/* line 3875, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-filterRow-lock {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 0px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* line 3879, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-summaryRow-lock {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 0px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* line 3886, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-vscroll {
+  width: 18px;
+  overflow: hidden;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+/* line 3891, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-vscroll-content {
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 3895, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-virtualscroll-top {
+  vertical-align: bottom;
+}
+
+/* line 3899, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-virtualscroll-bottom {
+  vertical-align: top;
+}
+
+/* line 3905, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-row-alt {
+  background: #f7f4fd;
+}
+
+/* line 3911, ../../../src/sass/miniui/_miniui.scss */
+html body .mini-grid-row-selected {
+  background: #dfe8f6;
+}
+
+/* line 3916, ../../../src/sass/miniui/_miniui.scss */
+html body .mini-grid .mini-grid-cell-selected {
+  background: #addffe;
+}
+
+/* line 3920, ../../../src/sass/miniui/_miniui.scss */
+body .mini-grid-row-hover {
+  background: #ecedef;
+}
+
+/* line 3928, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-topPager {
+  position: relative;
+  overflow: hidden;
+  border-bottom: solid 1px #C9C9C9;
+  background: #E7EAEE url(../../lib-base/miniui/themes/default/images/grid/footer.png) repeat-x 0 0;
+}
+
+/* line 3935, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-pager {
+  position: relative;
+  overflow: hidden;
+  border-top: solid 1px #C9C9C9;
+  background: #E7EAEE url(../../lib-base/miniui/themes/default/images/grid/footer.png) repeat-x 0 0;
+}
+
+/* line 3945, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-resizeColumns-no .mini-grid-column-splitter {
+  display: none;
+}
+
+/* line 3949, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-column-splitter {
+  position: absolute;
+  overflow: hidden;
+  background: white;
+  cursor: e-resize;
+  opacity: .0;
+  -moz-opacity: .0;
+  filter: alpha(opacity=0);
+  z-index: 100;
+  top: 0px;
+  right: -3px;
+  height: 100%;
+  width: 5px;
+}
+
+/* line 3964, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-sortIcon {
+  width: 9px;
+  height: 10px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: url(../../lib-base/miniui/themes/default/images/grid/icons.png) no-repeat -19px -18px;
+}
+
+/* line 3975, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-asc .mini-grid-sortIcon {
+  background-position: -19px -18px;
+}
+
+/* line 3980, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-desc .mini-grid-sortIcon {
+  background-position: -19px 0;
+}
+
+/* line 3985, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-asc .mini-grid-cellInner, .mini-grid-desc .mini-grid-cellInner {
+  position: relative;
+  padding-right: 18px;
+}
+
+/* line 3991, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-allowsort {
+  background: url("../../lib-base/miniui/themes/default/images/grid/sorticon.gif") no-repeat 50% 50%;
+  display: inline-block;
+  height: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  overflow: hidden;
+  width: 9px;
+}
+
+/* line 4003, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rowEdit {
+  background: #f9f9fc;
+}
+
+/* line 4007, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-rowEdit .mini-grid-cell {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/* line 4014, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkcolumn {
+  padding: 0;
+  text-align: center;
+}
+
+/* line 4018, ../../../src/sass/miniui/_miniui.scss */
+.mini-checkcolumn .mini-grid-cell-inner {
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+/* line 4025, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-expandCell .mini-grid-cell-inner {
+  padding: 0;
+}
+
+/* line 4029, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-ecIcon {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  background: no-repeat 50% 50%;
+  outline: none;
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/collapse.gif);
+}
+
+/* line 4039, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-expandRow .mini-grid-ecIcon {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/expand.gif);
+  background-position: 2px 50%;
+}
+
+/* line 4046, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-proxy {
+  position: absolute;
+  overflow: hidden;
+  background: gray;
+  opacity: .30;
+  -moz-opacity: .30;
+  filter: alpha(opacity=30);
+  border: solid 1px black;
+  z-index: 100000000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 4057, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-columnproxy {
+  position: absolute;
+  overflow: hidden;
+  line-height: 28px;
+  padding: 6px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 1000000;
+  background: #E7EBEF url(../../lib-base/miniui/themes/default/images/grid/header.png) repeat-x 0 0;
+  border: #A5ACB5 1px solid;
+  width: 100px;
+}
+
+/* line 4073, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-movetop, .mini-grid-movebottom {
+  position: absolute;
+  overflow: hidden;
+  width: 9px;
+  height: 9px;
+  background: url(../../lib-base/miniui/themes/default/images/grid/col-move-top.gif) no-repeat;
+  display: none;
+  z-index: 100000;
+}
+
+/* line 4082, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-movebottom {
+  background: url(../../lib-base/miniui/themes/default/images/grid/col-move-bottom.gif) no-repeat;
+}
+
+/* line 4086, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-no .mini-grid-columnproxy-inner {
+  padding-left: 20px;
+  background: url(../../lib-base/miniui/themes/default/images/grid/no.gif) no-repeat 0 6px;
+}
+
+/* line 4090, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-ok .mini-grid-columnproxy-inner {
+  padding-left: 20px;
+  background: url(../../lib-base/miniui/themes/default/images/grid/ok.gif) no-repeat 0 6px;
+}
+
+/* line 4096, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-fixwidth .mini-grid-table {
+  width: 0px;
+}
+
+/* line 4102, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-radio-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: white;
+  opacity: .0;
+  -moz-opacity: .0;
+  filter: alpha(opacity=0);
+}
+
+/* line 4113, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-checkbox,
+.mini-grid-checkbox,
+.mini-grid-radio {
+  min-width: 13px !important;
+  min-height: 13px !important;
+}
+
+/* line 4121, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-checkbox,
+.mini-grid-radio {
+  width: 13px;
+  height: 13px;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+}
+
+/* line 4132, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-checkbox {
+  background: url(../../lib-base/miniui/themes/default/images/icons/checkbox.gif) no-repeat 0 0;
+}
+
+/* line 4136, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-checkbox-checked,
+.mini-grid-row-selected .mini-checkcolumn .mini-grid-checkbox {
+  background: url(../../lib-base/miniui/themes/default/images/icons/checkbox.gif) no-repeat 0 -13px;
+}
+
+/* line 4141, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-radio {
+  background: url(../../lib-base/miniui/themes/default/images/icons/radio.gif) no-repeat 0 0;
+}
+
+/* line 4145, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-radio-checked,
+.mini-grid-row-selected .mini-checkcolumn .mini-grid-radio {
+  background: url(../../lib-base/miniui/themes/default/images/icons/radio.gif) no-repeat 0 -13px;
+}
+
+/* line 4152, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-column-trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+  border-left: solid 1px #ccc;
+  text-align: center;
+}
+
+/* line 4166, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid-headerCell:hover .mini-grid-column-trigger,
+.mini-grid-column-open .mini-grid-column-trigger {
+  display: block;
+}
+
+/* line 4172, ../../../src/sass/miniui/_miniui.scss */
+.mini-grid .mini-pager {
+  border-width: 0;
+}
+
+/* line 4176, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree .mini-grid-viewport {
+  background: none;
+}
+
+/* line 4182, ../../../src/sass/miniui/_miniui.scss */
+.mini-treegrid, .mini-tree {
+  display: none;
+}
+
+/* line 4186, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodes {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 4190, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treecell .mini-grid-cell-inner {
+  padding: 0;
+}
+
+/* line 4195, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-indent {
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+}
+
+/* line 4201, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodetitle {
+  margin-top: 0px;
+  margin-right: 2px;
+  overflow: hidden;
+  cursor: default;
+  white-space: nowrap;
+  height: 24px;
+  line-height: 16px;
+}
+
+/* line 4208, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree .mini-tree-icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 22px;
+  overflow: hidden;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  vertical-align: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+/* line 4223, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodetext {
+  height: 18px;
+  line-height: 18px;
+  /*    +line-height:19px；*/
+  vertical-align: middle;
+  _vertical-align: top;
+  display: inline-block;
+  padding-left: 3px;
+  padding-right: 3px;
+  white-space: nowrap;
+}
+
+/* line 4238, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodetext a {
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  display: inline-block;
+  margin-bottom: 2px;
+  margin-top: 1px\9\0;
+  /*    +line-height:16px；*/
+  _margin-top: 2px;
+}
+
+/* line 4256, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-node-ecicon {
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+  background: no-repeat 2px 0px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* line 4266, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-collapse .mini-tree-node-ecicon {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/collapse.gif);
+}
+
+/* line 4270, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-expand .mini-tree-node-ecicon {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/expand.gif);
+  background-position: 3px 0px;
+}
+
+/* line 4275, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-leaf {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/leaf.gif);
+}
+
+/* line 4279, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-folder {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/folder.gif);
+}
+
+/* line 4283, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-expand .mini-tree-folder {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/folder-open.gif);
+}
+
+/* line 4288, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-checkbox {
+  width: 16px\9;
+  height: 14px\9;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* line 4294, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tree .mini-tree-loading .mini-tree-node-ecicon,
+body .mini-tree-loading .mini-treegrid-ec-icon {
+  background: #fff url(../../lib-base/miniui/themes/default/images/tree/loading.gif) no-repeat scroll 50% 50%;
+}
+
+/* line 4301, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodeshow {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1px;
+  padding-left: 2px;
+  padding-right: 3px;
+  border: 0;
+  cursor: pointer;
+}
+
+/* line 4312, ../../../src/sass/miniui/_miniui.scss */
+.mini-treegrid .mini-tree-nodeshow {
+  cursor: default;
+}
+
+/* line 4317, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-node-hover .mini-tree-nodeshow {
+  padding: 0;
+  padding-left: 1px;
+  padding-right: 2px;
+  border: 1px solid #A9ACB5;
+  background: #dde6fe url(../../lib-base/miniui/themes/default/images/tree/hover.png) repeat-x 0 0;
+}
+
+/* line 4326, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-selectedNode .mini-tree-nodeshow {
+  padding: 0;
+  padding-left: 1px;
+  padding-right: 2px;
+  border: 1px solid #A9ACB5;
+  background: #EBEDF2 url(../../lib-base/miniui/themes/default/images/tree/button.png) repeat-x 0 0;
+  zoom: 1;
+}
+
+/* line 4338, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodeshow {
+  border: 1px solid transparent;
+  padding: 0;
+  _padding: 1px;
+  _padding-left: 2px;
+  _padding-right: 3px;
+  _border: 0;
+}
+
+/* line 4348, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-node-hover .mini-tree-nodeshow {
+  padding: 0;
+  _padding: 0;
+  _padding-left: 1px;
+  _padding-right: 2px;
+  _border: 1px solid #A9ACB5;
+}
+
+/* line 4357, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-selectedNode .mini-tree-nodeshow {
+  padding: 0;
+  _padding: 0;
+  _padding-left: 1px;
+  _padding-right: 2px;
+  _border: 1px solid #A9ACB5;
+}
+
+/* line 4368, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-indent {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/treeline.gif) repeat-y 9px 0px;
+}
+
+/* line 4372, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-node-ecicon {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/treeNodeLine.gif) no-repeat 1px -4px;
+}
+
+/* line 4377, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-expand .mini-tree-node-ecicon {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/expandLine.gif) no-repeat 2px -1px;
+}
+
+/* line 4380, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-collapse .mini-tree-node-ecicon {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/collapseLine.gif) no-repeat 1px -1px;
+}
+
+/* line 4383, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-node-ecicon-last {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/lastline.gif) no-repeat 2px -5px;
+}
+
+/* line 4389, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-expand .mini-tree-node-ecicon-first {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/firstExpandNode.gif) no-repeat 2px 0;
+}
+
+/* line 4393, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-expand .mini-tree-node-ecicon-last {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/lastExpandNode.gif) no-repeat 2px -1px;
+}
+
+/* line 4397, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-collapse .mini-tree-node-ecicon-first {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/firstCollapseNode.gif) no-repeat 1px 0;
+}
+
+/* line 4401, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-collapse .mini-tree-node-ecicon-last {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/lastCollapseNode.gif) no-repeat 1px -1px;
+}
+
+/* line 4407, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-expand .mini-tree-node-ecicon-firstLast {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/expand.gif) no-repeat 1px 0;
+}
+
+/* line 4411, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-collapse .mini-tree-node-ecicon-firstLast {
+  background: transparent url(../../lib-base/miniui/themes/default/images/tree/collapse.gif) no-repeat 0px 0;
+}
+
+/* line 4417, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-expand .mini-tree-node-ecicon-firstAndlast {
+  background-position: 50% 70%;
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/firstAndlastexpand.gif);
+}
+
+/* line 4422, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-collapse .mini-tree-node-ecicon-firstAndlast {
+  background-position: 50% 50%;
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/firstAndlastcollapse.gif);
+}
+
+/* line 4427, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-treeLine .mini-tree-node-ecicon-firstAndlast {
+  background-position: 50% 50%;
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/lastline.gif);
+}
+
+/* line 4435, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-editinput {
+  border-style: solid;
+  border-width: 1px;
+  background: white;
+  border-color: #9DA0AA #C2C4CB #D9DAE0;
+  font-size: 12px;
+  padding-top: 1px;
+  _padding-top: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-top: 0px;
+  width: 80px;
+  height: 15px;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+/* line 4457, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tree-showArrows .mini-tree-collapse .mini-tree-node-ecicon {
+  background: url(../../lib-base/miniui/themes/default/images/tree/arrows.gif) no-repeat 0px 2px;
+}
+
+/* line 4461, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tree-showArrows .mini-tree-expand .mini-tree-node-ecicon {
+  background: url(../../lib-base/miniui/themes/default/images/tree/arrows.gif) no-repeat -16px 2px;
+}
+
+/* line 4465, ../../../src/sass/miniui/_miniui.scss */
+body .mini-tree-showArrows .mini-tree-indent,
+body .mini-tree-showArrows .mini-tree-node-ecicon {
+  background: none;
+}
+
+/* line 4472, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nodeclick .mini-tree-parentNode .mini-tree-nodeshow {
+  cursor: pointer;
+}
+
+/* line 4481, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nowrap .mini-tree-nodetext {
+  overflow: visible;
+}
+
+/* line 4485, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nowrap .mini-grid-table {
+  table-layout: auto;
+}
+
+/* line 4489, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-nowrap .mini-tree-nodetitle {
+  overflow: visible;
+}
+
+/* line 4495, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-radio {
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  overflow: hidden;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  vertical-align: middle;
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/radio_unchecked.gif);
+}
+
+/* line 4506, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-selectedNode .mini-tree-radio, .mini-grid-row-selected .mini-tree-radio {
+  background-image: url(../../lib-base/miniui/themes/default/images/tree/radio_checked.gif);
+}
+
+/* line 4511, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree .mini-tree-checkbox,
+.mini-tree .mini-tree-radio {
+  line-height: 20px;
+}
+
+/* line 4517, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-checkbox {
+  width: 13px;
+  height: 13px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url(../../lib-base/miniui/themes/default/images/icons/checkbox.gif) no-repeat 0 0;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 1px;
+}
+
+/* line 4531, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-checkbox-checked {
+  background-position: 0 -13px;
+}
+
+/* line 4536, ../../../src/sass/miniui/_miniui.scss */
+.mini-tree-checkbox-indeterminate {
+  background-position: 0 -26px;
+}
+
+/* line 4540, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager {
+  width: auto;
+  overflow: hidden;
+  font-size: 9pt;
+  font-family: Tahoma, Verdana;
+  position: relative;
+  line-height: 24px;
+  min-height: 24px;
+  padding: 3px 8px 3px 4px;
+  border: solid 1px #C9C9C9;
+}
+
+/* line 4555, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-left {
+  overflow: hidden;
+  float: left;
+  position: relative;
+  padding-right: 2px;
+}
+
+/* line 4568, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-right {
+  float: right;
+}
+
+/* line 4576, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager .mini-button {
+  margin-right: 0px;
+}
+
+/* line 4588, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-num {
+  line-height: 20px;
+}
+
+/* line 4592, ../../../src/sass/miniui/_miniui.scss */
+body .mini-pager-num {
+  border: 1px solid #ccc;
+  margin: 0 2px;
+  width: 35px;
+  text-align: center;
+  outline: none;
+  /*	+vertical-align:middle；*/
+  position: relative;
+  _left: 0;
+  _top: -1px;
+  height: 21px;
+}
+
+/* line 4604, ../../../src/sass/miniui/_miniui.scss */
+body .mini-pager .mini-pager-num {
+  padding: 0;
+}
+
+/* line 4609, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-pages {
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
+}
+
+/* line 4615, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-size {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0px;
+}
+
+/* line 4627, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-size .mini-combobox {
+  width: 50px;
+}
+
+/* line 4632, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-index {
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+/* line 4640, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-first {
+  background: url(../../lib-base/miniui/themes/default/images/pager/first.gif) no-repeat;
+}
+
+/* line 4644, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-prev {
+  background-image: url(../../lib-base/miniui/themes/default/images/pager/prev.gif);
+}
+
+/* line 4648, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-next {
+  background-image: url(../../lib-base/miniui/themes/default/images/pager/next.gif);
+}
+
+/* line 4652, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-last {
+  background-image: url(../../lib-base/miniui/themes/default/images/pager/last.gif);
+}
+
+/* line 4656, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-reload {
+  background-image: url(../../lib-base/miniui/themes/default/images/pager/reload.png);
+}
+
+/* line 4661, ../../../src/sass/miniui/_miniui.scss */
+.mini-page-buttons .mini-button,
+.mini-page-buttons .mini-textbox,
+.mini-page-buttons .mini-buttonedit {
+  vertical-align: middle;
+}
+
+/* line 4667, ../../../src/sass/miniui/_miniui.scss */
+.mini-page-buttons {
+  position: relative;
+  top: -1px;
+  /*    +top:0px；*/
+}
+
+/* line 4675, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-left table {
+  float: left;
+}
+
+/* line 4680, ../../../src/sass/miniui/_miniui.scss */
+.mini-pager-sizetext {
+  vertical-align: middle;
+  padding: 2px;
+}
+
+/* line 4686, ../../../src/sass/miniui/_miniui.scss */
+.mini-htmlfile {
+  position: relative;
+}
+
+/* line 4691, ../../../src/sass/miniui/_miniui.scss */
+.mini-htmlfile-file {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  cursor: default;
+  opacity: .0;
+  -moz-opacity: .0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+
+/* line 4705, ../../../src/sass/miniui/_miniui.scss */
+.mini-htmlfile .mini-buttonedit-button {
+  font-size: 8pt;
+  font-size: 9pt\9;
+  font-family: Tahoma, Verdana;
+  white-space: nowrap;
+  border: 1px solid #A9ACB5;
+  background: #EBEDF2 url(../../lib-base/miniui/themes/default/images/buttonedit/button.png) repeat-x 0 0;
+  color: #201F35;
+  padding: 0;
+  width: 50px;
+  text-align: center;
+  line-height: 16px;
+}
+
+/* line 4721, ../../../src/sass/miniui/_miniui.scss */
+.mini-fileupload .swfupload, .mini-uploadify .swfupload {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #efefef;
+  opacity: .0;
+  -moz-opacity: .0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+
+/* line 4734, ../../../src/sass/miniui/_miniui.scss */
+.mini-buttonedit-disabled object {
+  display: none;
+}
+
+/* line 4738, ../../../src/sass/miniui/_miniui.scss */
+.mini-fileupload-progressbar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+}
+
+/* line 4744, ../../../src/sass/miniui/_miniui.scss */
+.mini-fileupload-complete {
+  width: 0;
+  height: 100%;
+  background-color: #2fd85e;
+}
+
+/* line 4750, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist {
+  width: 150px;
+  height: 24px;
+  display: inline-table;
+  *display: inline;
+  zoom: 1;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-collapse: separate;
+  vertical-align: middle;
+  font: 9pt Verdana;
+}
+
+/* line 4766, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-border {
+  border-style: solid;
+  border-width: 1px;
+  background: white;
+  border-color: #9DA0AA #C2C4CB #D9DAE0;
+  width: 100%;
+  cursor: text;
+  vertical-align: top;
+}
+
+/* line 4777, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-focus .mini-textboxlist-border {
+  border-color: #434756 #7D808D #AAACB9;
+}
+
+/* line 4782, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist ul {
+  zoom: 1;
+  overflow: hidden;
+  margin: 0;
+  padding: 2px;
+  padding-bottom: 0;
+  padding-left: 4px;
+}
+
+/* line 4787, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist li {
+  list-style-type: none;
+  float: left;
+  display: inline-block;
+  padding: 0;
+  margin: 0 3px 0px 0;
+  cursor: default;
+}
+
+/* line 4791, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist .mini-textboxlist-inputLi {
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+/* line 4796, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-input {
+  font: 9pt "Lucida Grande", Verdana;
+}
+
+/* line 4800, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist .mini-textboxlist-input {
+  border: 0;
+  padding: 0;
+  outline: none;
+  width: 20px;
+  height: 16px;
+  margin-top: 2px;
+  /*    *+margin-top:0px；*/
+  background: transparent;
+}
+
+/* line 4812, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist .mini-textboxlist-item {
+  position: relative;
+  padding: 0 6px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #CAD8F3;
+  background: #DEE7F8;
+  cursor: default;
+  padding-right: 15px;
+  height: 16px;
+  line-height: 16px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+/* line 4823, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist .mini-textboxlist-item-hover {
+  background: #BBCEF1;
+  border: 1px solid #6D95E0;
+}
+
+/* line 4827, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist .mini-textboxlist-item-selected {
+  border-color: #598BEC;
+  background: #598BEC;
+  color: #fff;
+}
+
+/* line 4831, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-close {
+  position: absolute;
+  right: 4px;
+  top: 5px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  font-size: 1px;
+  background: url(../../lib-base/miniui/themes/default/images/textboxlist/close.gif);
+  cursor: pointer;
+}
+
+/* line 4832, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-close-hover, .mini-textboxlist-item-selected .mini-textboxlist-close {
+  background-position: bottom;
+}
+
+/* line 4834, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist .mini-errorIcon {
+  margin-left: 2px;
+  margin-top: 2px;
+  position: static;
+}
+
+/* line 4841, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-popup-loading {
+  background: url(../../lib-base/miniui/themes/default/images/textboxlist/loading.gif) no-repeat 0 5px;
+  padding-left: 20px;
+  line-height: 25px;
+  display: block;
+}
+
+/* line 4848, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-popup-error {
+  background: url(../../lib-base/miniui/themes/default/images/textboxlist/error.gif) no-repeat 0 5px;
+  padding-left: 20px;
+  line-height: 25px;
+  display: block;
+}
+
+/* line 4855, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-popup-noresult {
+  padding-left: 20px;
+  line-height: 25px;
+  display: block;
+}
+
+/* line 4862, ../../../src/sass/miniui/_miniui.scss */
+.mini-textboxlist-popup .mini-listbox-item td {
+  white-space: nowrap;
+}
+
+/* line 4868, ../../../src/sass/miniui/_miniui.scss */
+.mini-required .mini-textboxlist-border {
+  background: #ffffe6;
+}
+
+/* line 4871, ../../../src/sass/miniui/_miniui.scss */
+.mini-tips {
+  *zoom: 1;
+  cursor: default;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: Verdana;
+  font-size: 12px;
+  color: #777;
+  background-color: #f5f5f5;
+  border-color: #eee;
+}
+
+/* line 4892, ../../../src/sass/miniui/_miniui.scss */
+.mini-tips-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+/* line 4898, ../../../src/sass/miniui/_miniui.scss */
+.mini-tips-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+/* line 4903, ../../../src/sass/miniui/_miniui.scss */
+.mini-tips-warning {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
+}
+
+/* line 4908, ../../../src/sass/miniui/_miniui.scss */
+.mini-tips-danger {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+/* line 4915, ../../../src/sass/miniui/_miniui.scss */
+.mini-tabs, .mini-tabs-scrollCt, .mini-tabs-bodys, .mini-tabs-body, .mini-tabs-header, .mini-tabs-header td
+.mini-layout, .mini-layout-border, .mini-layout-region, .mini-layout-region-body, .mini-layout-proxy,
+.mini-splitter, mini-splitter-border, .mini-splitter-pane, .mini-splitter-handler,
+.mini-panel-border, .mini-panel-viewport, .mini-panel-body,
+.mini-textbox-border, .mini-buttonedit-border, .mini-listbox-border, .mini-popup,
+.mini-menu, .mini-menu-border,
+.mini-grid {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 4929, ../../../src/sass/miniui/_miniui.scss */
+.mini-widget, body,
+.mini-button, .mini-menuitem, .mini-layout-region-header, .mini-panel-header,
+.mini-outlookbar-groupHeader,
+.mini-grid-headerCell, .mini-grid-cell, .mini-grid-columnproxy, .mini-grid-summaryCell, .mini-grid-groupTitle,
+.mini-listbox td,
+.mini-calendar, .mini-calendar-button,
+.mini-tabs,
+.mini-tree,
+.mini-textbox-input,
+.mini-buttonedit-input,
+.mini-textboxlist-input,
+.mini-textboxlist,
+.mini-pager,
+.mini-checkboxlist table label, .mini-radiobuttonlist table label,
+.mini-checkbox,
+.mini-checkboxlist, .mini-radiobuttonlist, .mini-radiobuttonlist label,
+.mini-layout,
+.mini-calendar, .mini-calendar-menu-month, mini-calendar-date, mini-calendar-menu-year, .mini-calendar-title {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+}
+
+/* line 1, ../../../src/sass/miniui/_medium-mode.scss */
+body {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* line 8, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menuitem-allow, .mini-menu-horizontal .mini-menuitem-allow,
+.mini-button-allow,
+.mini-buttonedit-icon,
+.mini-iconfont {
+  line-height: 16px;
+}
+
+/* button
+==========================================*/
+/* line 18, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+/* line 23, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-inner {
+  padding: 4px 10px 4px 10px;
+  padding: 5px 10px 3px 10px\9;
+  line-height: 16px;
+}
+
+/* line 29, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-icon {
+  left: 6px;
+}
+
+/* line 34, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button .mini-button-icon-text {
+  padding-left: 27px;
+}
+
+/* line 38, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button .mini-button-icon-only {
+  padding-left: 16px;
+}
+
+/* line 42, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button .mini-button-icon-only .mini-button-icon {
+  left: 7px;
+}
+
+/* line 46, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-iconRight .mini-button-icon-text {
+  padding-left: 10px;
+  padding-right: 27px;
+}
+
+/* line 51, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-iconRight .mini-button-icon {
+  left: auto;
+  right: 6px;
+}
+
+/* line 56, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-iconTop .mini-button-icon-text {
+  padding-left: 10px;
+  padding-top: 26px;
+}
+
+/* line 61, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-iconTop .mini-button-icon {
+  left: 50%;
+  margin-left: -9px;
+  top: 4px;
+  margin-top: auto;
+}
+
+/* line 68, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-button-allow {
+  margin-top: 4px;
+  position: relative;
+  left: -2px;
+}
+
+/* textbox
+==========================================*/
+/* line 77, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textbox-input {
+  height: 24px;
+  line-height: 24px;
+  font-size: 13px;
+}
+
+/* line 83, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textbox-border {
+  padding-left: 6px;
+  padding-right: 6px;
+  height: 24px;
+}
+
+/* line 89, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textbox {
+  overflow: visible;
+  height: 26px;
+  width: 150px;
+}
+
+/* line 95, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textarea .mini-textbox-border {
+  padding-left: 6px;
+  padding-right: 0px;
+}
+
+/* line 100, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textarea .mini-textbox-input {
+  line-height: 18px;
+}
+
+/* line 104, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-placeholder-label {
+  line-height: 20px;
+  padding-left: 4px;
+}
+
+/* buttonedit
+==========================================*/
+/* line 112, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-buttonedit-input {
+  height: 24px;
+  line-height: 24px;
+  font-size: 13px;
+}
+
+/* line 118, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-buttonedit-border {
+  padding-left: 6px;
+  padding-right: 22px;
+  height: 24px;
+}
+
+/* line 124, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-buttonedit {
+  overflow: visible;
+  height: 26px;
+  width: 150px;
+}
+
+/* line 130, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-buttonedit-button {
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+}
+
+/* line 136, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-buttonedit-close {
+  height: 20px;
+  line-height: 20px;
+}
+
+/*.mini-buttonedit-up span, .mini-buttonedit-down span
+{
+    background-position:50% 3px;
+}*/
+/* htmlfile
+==========================================*/
+/* line 148, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-htmlfile .mini-buttonedit-button {
+  line-height: 20px;
+}
+
+/* textboxlist
+==========================================*/
+/* line 155, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textboxlist {
+  height: 26px;
+}
+
+/* line 159, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textboxlist ul {
+  padding-top: 3px;
+  padding-left: 6px;
+}
+
+/* line 164, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textboxlist .mini-textboxlist-item {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+/* line 169, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textboxlist .mini-errorIcon {
+  margin-top: 4px;
+}
+
+/* line 173, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-textboxlist .mini-textboxlist-input {
+  height: 16px;
+  line-height: 16px;
+}
+
+/* checkbox
+==========================================*/
+/* line 181, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-checkbox {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+/* line 186, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-checkbox-check,
+.mini-checkbox-icon {
+  margin-right: 8px;
+}
+
+/* checkboxlist & radiobuttonlist
+==========================================*/
+/* line 194, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-checkboxlist table label,
+.mini-radiobuttonlist table label {
+  padding-left: 6px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+/* listbox
+==========================================*/
+/* line 204, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-listbox td {
+  line-height: 18px;
+  font-size: 13px;
+  padding: 4px 6px 4px 6px;
+}
+
+/* line 210, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-listbox .mini-listbox-checkbox {
+  width: 22px;
+}
+
+/* grid
+==========================================*/
+/* line 218, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-grid-cell-inner {
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+/* line 224, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-grid-headerCell-inner {
+  padding-top: 4px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+/* line 230, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-grid-headerCell-outer {
+  padding-left: 6px;
+  padding-right: 4px;
+}
+
+/* line 235, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-grid-columnproxy {
+  padding-top: 2px;
+  padding-bottom: 4px;
+}
+
+/* line 240, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-grid-allowsort,
+.mini-grid-sortIcon {
+  margin-left: 4px;
+}
+
+/* treegrid & tree
+==========================================*/
+/* line 248, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tree-nodetitle,
+.mini-tree-node-ecicon,
+.mini-tree-indent {
+  height: 26px;
+}
+
+/* line 254, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tree-nodeshow {
+  padding: 1px 3px 1px 2px;
+}
+
+/* line 258, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tree-node-hover .mini-tree-nodeshow,
+.mini-tree-selectedNode .mini-tree-nodeshow {
+  /*padding:1px 3px 0px 2px;*/
+  padding: 1px 3px 1px 2px;
+}
+
+/* line 264, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tree-nodetext {
+  padding-left: 2px;
+}
+
+/* line 268, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tree-checkbox {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+/* pager
+==========================================*/
+/* line 276, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-pager {
+  min-height: 26px;
+  line-height: 26px;
+  padding: 4px 8px 4px 6px;
+}
+
+/* line 282, ../../../src/sass/miniui/_medium-mode.scss */
+body .mini-pager-num {
+  height: 24px;
+  line-height: 22px;
+}
+
+/* toolbar
+==========================================*/
+/* line 290, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-toolbar {
+  padding: 4px;
+}
+
+/* tools
+==========================================*/
+/* line 297, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tools span,
+.mini-tools a {
+  margin-left: 4px;
+}
+
+/* panel
+==========================================*/
+/* line 305, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-panel-header-inner {
+  padding: 8px 8px 8px 10px;
+  font-size: 14px;
+}
+
+/* line 310, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-panel .mini-panel-icon {
+  margin-right: 6px;
+}
+
+/* line 314, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-panel .mini-tools {
+  top: 8px;
+  right: 8px;
+}
+
+/* line 319, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-panel-body {
+  padding: 6px;
+}
+
+/* line 323, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-panel-toolbar,
+.mini-panel-footer {
+  /*padding:4px;*/
+}
+
+/* layout
+==========================================*/
+/* line 331, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-layout {
+  font-size: 13px;
+}
+
+/* line 335, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-layout-region-header,
+.mini-layout-proxy {
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 341, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-layout-proxy {
+  width: 32px;
+}
+
+/* line 345, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-layout-region-header .mini-tools,
+.mini-layout-proxy .mini-tools {
+  top: 8px;
+  right: 12px;
+}
+
+/* line 351, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-layout-proxy-text {
+  left: 4px;
+  font-size: 13px;
+}
+
+/* outlookbar
+==========================================*/
+/* line 359, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-outlookbar {
+  font-size: 14px;
+}
+
+/* line 363, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-outlookbar-groupHeader {
+  line-height: 18px;
+  padding: 7px 25px 7px 8px;
+}
+
+/* line 368, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-outlookbar-groupTitle {
+  padding-left: 4px;
+}
+
+/* line 372, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-outlookbar-groupHeader .mini-tools {
+  top: 7px;
+  right: 8px;
+}
+
+/* menu
+==========================================*/
+/* line 380, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menu {
+  font-size: 13px;
+}
+
+/* line 384, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menuitem-inner {
+  padding: 3px 22px 3px 28px;
+}
+
+/* line 388, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menuitem-icon {
+  left: 6px;
+  top: 5px;
+}
+
+/* line 393, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menuitem-allow {
+  top: 4px;
+  right: 4px;
+}
+
+/* line 398, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menu-horizontal .mini-menuitem-allow {
+  top: 2px;
+}
+
+/* line 402, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menu-horizontal .mini-menu-inner {
+  padding: 6px;
+}
+
+/* line 406, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menu-horizontal .mini-menuitem-inner {
+  padding: 2px 6px 2px 6px;
+}
+
+/* line 410, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-menu-horizontal .mini-menuitem-icon {
+  margin-right: 2px;
+}
+
+/* tabs
+==========================================*/
+/* line 417, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tab {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* line 422, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tab-text {
+  font-size: 13px;
+  line-height: 16px;
+  padding: 4px 6px 4px 6px;
+}
+
+/* line 428, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tabs-plain .mini-tab-text {
+  line-height: 17px;
+}
+
+/* line 432, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tab-close {
+  /*margin-top:6px;*/
+}
+
+/* line 436, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tabs-tabmenu {
+  top: 6px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  margin-right: 4px;
+}
+
+/* line 445, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tabs-nav,
+.mini-tabs-leftnav {
+  top: 6px;
+  padding-left: 8px;
+  padding-right: 4px;
+}
+
+/* line 452, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tabs-leftButton, .mini-tabs-rightButton {
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  margin-right: 4px;
+}
+
+/* line 459, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-tabs-buttons {
+  /*padding-top:4px;*/
+}
+
+/* calendar
+==========================================*/
+/* line 466, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar,
+.mini-calendar-title,
+.mini-calendar-menu-month,
+.mini-calendar-menu-year {
+  font-size: 13px;
+}
+
+/* line 473, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-header {
+  height: 30px;
+}
+
+/* line 477, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-title {
+  top: 2px;
+}
+
+/* line 481, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-prev,
+.mini-calendar-next {
+  top: 7px;
+}
+
+/* line 486, ../../../src/sass/miniui/_medium-mode.scss */
+body .mini-calendar td.mini-calendar-date {
+  line-height: 16px;
+  /*padding:2px 4px;*/
+  padding: 4px 8px;
+}
+
+/* line 492, ../../../src/sass/miniui/_medium-mode.scss */
+body .mini-calendar .mini-calendar-daysheader td {
+  line-height: 18px;
+  padding: 4px;
+}
+
+/* line 497, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-tadayButton, .mini-calendar-clearButton,
+.mini-calendar-okButton, .mini-calendar-cancelButton {
+  line-height: 14px;
+  padding: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 505, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-menu-year {
+  padding: 2px 1px;
+}
+
+/* line 510, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-menu-month,
+.mini-calendar-menu-year {
+  width: 50px;
+  height: 26px;
+  line-height: 24px;
+}
+
+/* line 517, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-menu-year {
+  width: 40px;
+}
+
+/* line 521, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-calendar-timespinner {
+  width: 85px;
+}
+
+/* progressbar
+==========================================*/
+/* line 527, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-progressbar {
+  height: 26px;
+}
+
+/* line 531, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-progressbar-border {
+  height: 24px;
+}
+
+/* line 535, ../../../src/sass/miniui/_medium-mode.scss */
+.mini-progressbar-text {
+  line-height: 24px;
+  font-size: 13px;
+}
+
+/* base */
+/* line 4, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-modal {
+  background: #fff;
+  opacity: .6;
+  filter: alpha(opacity=60);
+}
+
+/* line 10, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-mask-background {
+  background: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 18, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-popup,
+.mini-window,
+.mini-menu-open,
+.mini-shadow {
+  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* line 27, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-shadow {
+  display: block !important;
+}
+
+/* button */
+/* line 33, ../../../src/sass/miniui/_flatstyle.scss */
+span.mini-button-allow {
+  margin-top: -2px;
+}
+
+/* line 37, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-button-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  line-height: 16px;
+}
+
+/* line 44, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-button .mini-button-icon-only .mini-button-icon {
+  left: 5px;
+}
+
+/* textbox & buttonedit */
+/* line 51, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-button {
+  /*border-width:0px !important;*/
+  /*border-width:1px !important;
+  border-color:transparent !important;*/
+  border-color: transparent;
+  background: none;
+  /*width:18px;height:20px;*/
+}
+
+/* line 61, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-button-hover,
+.mini-buttonedit-hover .mini-buttonedit-trigger,
+.mini-buttonedit-focus .mini-buttonedit-trigger {
+  border-color: transparent;
+}
+
+/* line 68, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-htmlfile .mini-buttonedit-button {
+  /*margin:0;
+  border-width:1px !important;*/
+}
+
+/* spinner */
+/* line 75, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-up span,
+.mini-buttonedit-down span {
+  font-size: 12px;
+  line-height: 9px;
+  min-height: 9px;
+}
+
+/* line 83, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-close {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+}
+
+/* line 87, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-button,
+.mini-buttonedit-up span, .mini-buttonedit-down span {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+}
+
+/* line 93, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-close:hover,
+.mini-buttonedit-button:hover, .mini-buttonedit-focus .mini-button-trigger, .mini-buttonedit-popup .mini-button-trigger,
+.mini-buttonedit-up:hover span, .mini-buttonedit-down:hover span {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* tools */
+/* line 102, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-panel .mini-tools {
+  top: 5px;
+}
+
+/* line 106, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tools span {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/* line 111, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tools span:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* menu */
+/* line 118, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menuitem-allow,
+.mini-menuitem-icon {
+  top: 4px;
+}
+
+/* line 123, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-horizontal .mini-menuitem-allow {
+  /*position:relative;
+  top:-4px;*/
+  margin-top: 2px;
+}
+
+/* line 130, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-inner {
+  padding: 0;
+}
+
+/* line 134, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menuitem {
+  border-width: 0;
+  padding: 0;
+}
+
+/* line 139, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menuitem-inner {
+  padding: 2px 22px 2px 28px;
+}
+
+/* line 142, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-separator {
+  margin: 1px 0;
+}
+
+/* line 146, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-horizontal, .mini-menu-horizontal .mini-menu-border {
+  border-radius: 0;
+}
+
+/* line 150, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-horizontal .mini-menuitem {
+  border-width: 1px;
+  border-radius: 6px;
+}
+
+/* grid */
+/* line 157, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-checkbox.mini-icon,
+.mini-tree-checkbox.mini-icon {
+  text-align: left;
+}
+
+/* line 163, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-checkbox,
+.mini-grid-checkbox,
+.mini-grid-radio {
+  min-width: 16px !important;
+  min-height: 16px !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+
+/* line 173, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-sortIcon {
+  position: relative;
+  top: -1px;
+}
+
+/* line 179, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-ecIcon.mini-icon {
+  line-height: 20px;
+}
+
+/* line 184, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-detailRow {
+  background: none;
+}
+
+/* line 189, ../../../src/sass/miniui/_flatstyle.scss */
+body .mini-grid-group-ecicon {
+  line-height: 23px;
+  padding-left: 4px;
+}
+
+/* line 194, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-groupTitle {
+  padding-left: 30px;
+}
+
+/* line 199, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-radio::before {
+  content: "\f10c";
+  font: normal normal normal 16px/1 FontAwesome;
+}
+
+/* line 204, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-radio-checked::before {
+  content: "\f192";
+  font: normal normal normal 16px/1 FontAwesome;
+}
+
+/* tree */
+/* line 211, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-icon {
+  background-image: none;
+}
+
+/* line 215, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree .mini-tree-icon {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+}
+
+/* tabs */
+/* line 223, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tabs .mini-tab-close {
+  border-width: 0px;
+  position: relative;
+  top: -1px;
+  font-size: 13px;
+}
+
+/* line 230, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tab-active {
+  font-weight: bold;
+}
+
+/* calendar */
+/* line 236, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-date {
+  border-color: transparent;
+}
+
+/*.mini-calendar-title
+{
+    font-weight:bold;
+}*/
+/* line 245, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-selected,
+.mini-calendar-menu-selected,
+.mini-calendar-menu-month,
+.mini-calendar-menu-year {
+  border-color: transparent;
+}
+
+/* line 252, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-prev, .mini-calendar-next {
+  top: 4px;
+}
+
+/* checkbox */
+/* line 258, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkbox {
+  line-height: 22px;
+}
+
+/* line 262, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkbox-icon.mini-icon {
+  text-align: left;
+  padding-left: 2px;
+}
+
+/* pager */
+/* line 269, ../../../src/sass/miniui/_flatstyle.scss */
+body .mini-pager-reload {
+  font-size: 13px;
+}
+
+/* line 273, ../../../src/sass/miniui/_flatstyle.scss */
+body .mini-pager-num {
+  height: 22px;
+  line-height: 20px;
+}
+
+/* line 278, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-page-buttons {
+  top: 0;
+}
+
+/* list */
+/* line 284, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-list-icon.mini-icon {
+  text-align: left;
+  outline: none;
+}
+
+/*=======================================================================*/
+/* icon */
+/* line 292, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-icon {
+  font: normal normal normal 16px/1 FontAwesome;
+  background: none;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 16px;
+  min-height: 16px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+/* line 304, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menuitem-allow:before {
+  content: "\f0da";
+}
+
+/* line 309, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-horizontal .mini-menuitem-allow:before,
+.mini-button-allow:before {
+  content: "\f0d7";
+}
+
+/* line 315, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-leaf:before {
+  content: "\f15b";
+}
+
+/* line 319, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-folder:before {
+  content: "\f07b";
+}
+
+/* line 323, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-expand .mini-tree-folder:before {
+  content: "\f07c";
+}
+
+/*.mini-tools .mini-tools-collapse,
+.mini-tools .mini-tools-expand,
+.mini-tools .mini-tools-close
+{
+    background:none;    
+}*/
+/* line 334, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tools-collapse:before {
+  content: "\f077";
+}
+
+/* line 338, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-panel-collapse .mini-tools-collapse:before,
+.mini-outlookbar-expand > .mini-outlookbar-groupHeader .mini-tools-collapse:before {
+  /*content: "\f107"*/
+  content: "\f078";
+}
+
+/* line 344, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tools-close:before {
+  content: "\f00d";
+}
+
+/* line 348, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tools-max:before {
+  content: "\f2d0";
+  font-size: 12px;
+}
+
+/* line 353, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tools-restore:before {
+  content: "\f2d2";
+  font-size: 12px;
+}
+
+/* line 359, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-yearPrev:before {
+  content: "\f100";
+}
+
+/* line 363, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-yearNext:before {
+  content: "\f101";
+}
+
+/* line 367, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-monthPrev:before,
+.mini-calendar-menu-prevYear:before {
+  content: "\f104";
+}
+
+/* line 372, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-calendar-monthNext:before,
+.mini-calendar-menu-nextYear:before {
+  content: "\f105";
+}
+
+/* line 378, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkcolumn .mini-grid-checkbox:before,
+.mini-grid-checkbox:before {
+  content: "\f096";
+}
+
+/* line 384, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-row-selected .mini-checkcolumn .mini-grid-checkbox:before,
+.mini-grid-headerCell.mini-checkcolumn .mini-grid-checkbox.mini-grid-checkbox-checked:before,
+.mini-grid-checkbox.mini-grid-checkbox-checked:before,
+.mini-menuitem-checked .mini-menuitem-icon:before {
+  content: "\f046";
+  /* content: "\f14a"; */
+}
+
+/* line 391, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-desc .mini-grid-sortIcon:before {
+  content: "\f0d7";
+}
+
+/* line 394, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-asc .mini-grid-sortIcon:before {
+  content: "\f0d8";
+}
+
+/* line 397, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-allowsort:before {
+  content: "\f0dc";
+  font-size: 13px;
+}
+
+/* line 403, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-ecIcon:before, .mini-grid-group-collapse .mini-grid-group-ecicon:before {
+  content: "\f067";
+}
+
+/* line 407, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-grid-expandRow .mini-grid-ecIcon:before, .mini-grid-group-ecicon:before {
+  content: "\f068";
+}
+
+/* line 414, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-radiobuttonlist-item .mini-list-icon:before,
+.mini-tree-radio:before,
+.mini-grid-radio-checked:before, .mini-checkcolumn .mini-grid-radio:before {
+  content: "\f10c";
+}
+
+/* line 420, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-radiobuttonlist-item-selected .mini-list-icon:before,
+.mini-tree-selectedNode .mini-tree-radio:before, .mini-grid-row-selected .mini-tree-radio:before,
+.mini-grid-radio-checked:before, .mini-grid-row-selected .mini-checkcolumn .mini-grid-radio:before {
+  content: "\f192";
+}
+
+/* line 427, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-list-icon:before {
+  content: "\f096";
+}
+
+/* line 431, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkboxlist-item-selected .mini-list-icon:before {
+  content: "\f046";
+}
+
+/* line 436, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkbox-check:before,
+.mini-checkbox-icon:before {
+  content: "\f096";
+}
+
+/* line 441, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkbox-checked .mini-checkbox-icon:before {
+  content: "\f046";
+}
+
+/* line 446, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-checkbox:before {
+  content: "\f096";
+}
+
+/* line 450, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tree-checkbox-checked:before {
+  content: "\f046";
+}
+
+/* line 455, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-pager-first:before {
+  content: "\f100";
+}
+
+/* line 459, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-pager-prev:before {
+  content: "\f104";
+}
+
+/* line 462, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-pager-next:before {
+  content: "\f105";
+}
+
+/* line 465, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-pager-last:before {
+  content: "\f101";
+}
+
+/* line 468, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-pager-reload:before {
+  content: "\f021";
+}
+
+/* line 472, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tab-close-hover:hover {
+  content: "\f00d";
+}
+
+/* line 476, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tab-close:before {
+  content: "\f00d";
+}
+
+/* line 480, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tabs-leftButton:before {
+  content: "\f0d9";
+}
+
+/* line 483, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tabs-rightButton:before {
+  content: "\f0da";
+}
+
+/* line 486, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-tabs-tabmenu:before {
+  content: "\f0d7";
+}
+
+/* line 490, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-trigger .mini-buttonedit-icon:before {
+  /*content: "\f0d7";   */
+  content: "\f141";
+  font-size: 14px;
+}
+
+/* line 496, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-close:before {
+  content: "\f00d";
+  font-size: 12px;
+}
+
+/* line 502, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-popupedit .mini-buttonedit-trigger .mini-buttonedit-icon:before {
+  content: "\f0d7";
+}
+
+/* line 506, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-datepicker .mini-buttonedit-trigger .mini-buttonedit-icon:before {
+  content: "\f073";
+}
+
+/* line 511, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-up span:before {
+  content: "\f0d8";
+}
+
+/* line 515, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-buttonedit-down span:before {
+  content: "\f0d7";
+}
+
+/* line 520, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-filteredit .mini-buttonedit-icon:before {
+  content: "\f0b0";
+}
+
+/* line 525, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-layout-region-west .mini-layout-region-header .mini-tools-collapse:before {
+  content: "\f053";
+}
+
+/* line 529, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-layout-region-east .mini-layout-region-header .mini-tools-collapse:before {
+  content: "\f054";
+}
+
+/* line 533, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-layout-proxy-west .mini-tools-collapse:before {
+  content: "\f054";
+}
+
+/* line 537, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-layout-proxy-east .mini-tools-collapse:before {
+  content: "\f053";
+}
+
+/* line 541, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-layout-proxy-north .mini-tools-collapse:before,
+.mini-layout-proxy-south .mini-tools-collapse:before {
+  content: "\f078";
+}
+
+/* line 547, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-topArrow:before {
+  content: "\f077";
+}
+
+/* line 551, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-menu-bottomArrow:before {
+  content: "\f078";
+}
+
+/* no background */
+/* line 557, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-checkboxlist-item .mini-list-icon,
+.mini-radiobuttonlist-item .mini-list-icon,
+.mini-popupedit .mini-buttonedit-trigger .mini-buttonedit-icon,
+.mini-datepicker .mini-buttonedit-trigger .mini-buttonedit-icon,
+.mini-filteredit .mini-buttonedit-icon,
+span.mini-buttonedit-button-hover, .mini-buttonedit-hover .mini-buttonedit-trigger, .mini-buttonedit-button-pressed, .mini-buttonedit-popup .mini-buttonedit-trigger,
+.mini-buttonedit-up span, .mini-buttonedit-down span,
+.mini-layout-region .mini-layout-region-header .mini-tools span,
+.mini-tab-close,
+.mini-grid-checkbox, .mini-grid-radio,
+.mini-grid-checkbox-checked, .mini-grid-row-selected .mini-checkcolumn .mini-grid-checkbox,
+.mini-tools .mini-tools-collapse, .mini-tools .mini-tools-close, .mini-tools .mini-tools-max, .mini-tools .mini-tools-restore,
+.mini-calendar-menu-prevYear, .mini-calendar-menu-nextYear,
+.mini-outlookbar .mini-outlookbar-expand .mini-tools-collapse,
+mini-tabs-plain .mini-tabs-scrollCt,
+.mini-tabs .mini-tabs-plain .mini-tabs-space, .mini-tabs .mini-tabs-plain .mini-tabs-space2,
+.mini-tabs-leftButton, .mini-tabs-rightButton, .mini-tabs-tabmenu,
+.mini-calendar-header,
+.mini-menu .mini-menuitem-checked .mini-menuitem-icon,
+.mini-menu-horizontal .mini-menu-border, .mini-menu-horizontal .mini-menuitem-allow,
+.mini-tree-selectedNode .mini-tree-radio, .mini-grid-row-selected .mini-tree-radio,
+.mini-grid-radio-checked, .mini-grid-row-selected .mini-checkcolumn .mini-grid-radio,
+.mini-grid-ecIcon, .mini-grid-expandRow .mini-grid-ecIcon,
+.mini-grid-group-ecicon, .mini-grid-group-collapse .mini-grid-group-ecicon,
+.mini-tree-expand .mini-tree-folder
+ {
+  background: none;
+}
+
+/* family */
+/*
+.mini-widget, body, 
+.mini-button, .mini-menuitem, .mini-layout-region-header, .mini-panel-header,
+.mini-outlookbar-groupHeader,
+.mini-grid-headerCell, .mini-grid-cell, .mini-grid-columnproxy,
+.mini-listbox td,
+.mini-calendar, .mini-calendar-button,
+.mini-tabs, 
+.mini-tree,
+.mini-textbox-input,
+.mini-buttonedit-input,
+.mini-textboxlist-input,
+.mini-textboxlist,
+.mini-pager,
+.mini-checkboxlist table label, .mini-radiobuttonlist table label,
+.mini-checkbox,
+.mini-checkboxlist, .mini-radiobuttonlist, .mini-radiobuttonlist label,
+.mini-layout,
+.mini-calendar, .mini-calendar-menu-month, mini-calendar-date, mini-calendar-menu-year, .mini-calendar-title
+{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:13px;
+}*/
+/* corner */
+/* line 614, ../../../src/sass/miniui/_flatstyle.scss */
+.mini-corner-all,
+.mini-button,
+.mini-window, .mini-window > .mini-panel-border,
+.mini-menu, .mini-menu-border,
+.mini-tab,
+.mini-tree-nodeshow,
+.mini-textboxlist, .mini-textboxlist-border
+.mini-textbox, .mini-textbox-border,
+.mini-buttonedit, .mini-buttonedit-border,
+.mini-htmlfile .mini-buttonedit-button,
+.mini-calendar-button,
+body .mini-pager-num,
+.mini-tooltip-inner {
+  /*border-radius:6px;*/
+}
+
+/* common theme */
+/* line 4, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-widget-content,
+body, .mini-popup, .mini-toolbar, .separator, .mini-panel-border, .mini-pager,
+.mini-panel-toolbar, .mini-panel-footer, .mini-panel-viewport, .mini-window .mini-panel-footer,
+.mini-outlookbar-border, .mini-outlookbar .mini-outlookbar-group, .mini-outlookbar .mini-outlookbar-groupBody, .mini-outlookbar-view2 .mini-outlookbar-groupBody, mini-outlookbar-view3 .mini-outlookbar-group,
+.mini-splitter-border, .mini-splitter .mini-splitter-pane1, .mini-splitter .mini-splitter-pane2,
+.mini-layout-border, .mini-layout-region,
+.mini-menu, .mini-menu-border, .mini-menu-horizontal .mini-menu-border
+.mini-grid-border, .mini-grid-footer, .mini-grid-pager, .mini-grid-filterRow, .mini-grid-groupCell, .mini-grid-summaryCell,
+.mini-listbox-border,
+.mini-progressbar-border,
+.mini-calendar, .mini-calendar-footer, .mini-calendar-menu,
+.mini-tabs-bodys, .mini-tabs .mini-tabs-space, .mini-tabs .mini-tabs-space2, .mini-tabs .mini-tab-active,
+.mini-textbox-border,
+.mini-buttonedit-border,
+.mini-textboxlist-border, .mini-tooltip-inner,
+body .mini-pager-num {
+  border-color: #c5c5c5;
+  background: #fff;
+  color: #444;
+}
+
+/* line 26, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-widget-header,
+.app-header, .app-toolbar, .bg-toolbar,
+.mini-panel-header,
+.mini-window .mini-panel-header,
+.mini-outlookbar .mini-outlookbar-groupHeader, .mini-outlookbar-expand .mini-outlookbar-groupHeader, .mini-outlookbar-view2 .mini-outlookbar-groupHeader,
+.mini-layout-region-header, .mini-layout-proxy,
+.mini-calendar-header,
+.mini-tabs-scrollCt,
+.mini-tabs .mini-tabs-space, .mini-tabs .mini-tabs-space2 {
+  border-color: #c5c5c5;
+  background: #fff;
+  color: #444;
+}
+
+/* line 41, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-default,
+.mini-button,
+.mini-grid-header, .mini-grid-column-trigger, .mini-grid-headerCell, .mini-grid-topRightCell, .mini-grid-columnproxy,
+.mini-listbox-header, .mini-listbox-header td,
+.mini-progressbar-bar,
+.mini-calendar-tadayButton, .mini-calendar-clearButton, .mini-calendar-okButton, .mini-calendar-cancelButton,
+.mini-tabs-leftButton, .mini-tabs-rightButton, .mini-tabs-tabmenu,
+.mini-tab,
+.mini-textboxlist .mini-textboxlist-item,
+.mini-htmlfile .mini-buttonedit-button {
+  border-color: #c5c5c5;
+  background: #fff;
+  color: #444;
+}
+
+/* line 57, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-hover, .mini-state-focus,
+body a:hover.mini-button,
+body a:focus.mini-button,
+body .mini-button-pressed, body a:hover.mini-button-pressed,
+body a.mini-button-popup, body a:hover.mini-button-popup,
+.mini-outlookbar .mini-outlookbar-hover,
+.mini-layout-proxy-hover,
+.mini-menuitem-hover, .mini-menu-popup, .mini-menuitem-selected,
+html body .mini-grid-row-hover,
+.mini-listbox-item-hover td,
+.mini-calendar-tadayButton:hover, .mini-calendar-clearButton:hover, .mini-calendar-okButton:hover, .mini-calendar-cancelButton:hover,
+a:hover.mini-calendar-menu-month, a:hover.mini-calendar-menu-year, .mini-calendar-date:hover,
+a:hover.mini-tabs-leftButton, a:hover.mini-tabs-rightButton, a:hover.mini-tabs-tabmenu,
+.mini-tab-hover, span.mini-tab-close-hover,
+.mini-tree-node-hover .mini-tree-nodeshow,
+.mini-textbox-focus .mini-textbox-border,
+.mini-buttonedit-focus .mini-buttonedit-border,
+.mini-textboxlist-focus .mini-textboxlist-border,
+.mini-textboxlist .mini-textboxlist-item:hover,
+.mini-htmlfile .mini-buttonedit-button:hover, .mini-pager-num:focus {
+  border-color: #c5c5c5;
+  background: #efefef;
+  color: #000;
+}
+
+/* line 83, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-active,
+body .mini-button-checked, body a:hover.mini-button-checked, body a:focus.mini-button-checked,
+html body .mini-grid-row-selected,
+.mini-listbox-item-selected td,
+.mini-calendar .mini-calendar-selected, .mini-calendar-menu-selected,
+.mini-tree-selectedNode .mini-tree-nodeshow {
+  border-color: #c5c5c5;
+  background: #ddd;
+  color: #000;
+}
+
+/* line 95, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-highlight,
+.mini-calendar .mini-calendar-today {
+  border-color: #f9dd34;
+  background: #fffadd;
+  color: #363636;
+}
+
+/* line 103, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-error,
+body .mini-error .mini-textbox-border,
+body .mini-error .mini-buttonedit-border,
+body .mini-error .mini-textboxlist-border {
+  border-color: #ffa8a8;
+  background-color: #fff8f8;
+  color: #000;
+}
+
+/* line 113, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-disabled, .mini-button-disabled {
+  opacity: .5 !important;
+  filter: alpha(opacity=50) !important;
+  background-image: none !important;
+}
+
+/* line 120, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-icon, .mini-widget-content .mini-icon {
+  color: #888;
+}
+
+/* line 123, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-widget-header .mini-icon {
+  color: #888;
+}
+
+/* line 126, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-default .mini-icon {
+  color: #888;
+}
+
+/* line 129, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-hover .mini-icon, .mini-state-focus .mini-icon {
+  color: #888;
+}
+
+/* line 132, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-active .mini-icon {
+  color: #888;
+}
+
+/* line 135, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-highlight .mini-icon {
+  color: #888;
+}
+
+/* line 138, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-state-error .mini-icon, .mini-state-error-text .mini-icon {
+  color: #ff6c6c;
+}
+
+/* control theme */
+/* line 145, ../../../src/sass/miniui/skins/_metro-white.scss */
+fieldset {
+  border-color: #ddd !important;
+}
+
+/* line 150, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-button, .mini-calendar-button {
+  border-color: #c5c5c5;
+}
+
+/* line 155, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-textbox-input,
+.mini-buttonedit-input,
+.mini-menuitem-text, .mini-menuitem-text a {
+  color: #444;
+}
+
+/* line 162, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-menuitem-hover .mini-menuitem-text, .mini-menuitem-hover .mini-menuitem-text a,
+.mini-menuitem-popup .mini-menuitem-text, .mini-menuitem-popup .mini-menuitem-text a,
+.mini-menuitem-selected .mini-menuitem-text, .mini-menuitem-selected .mini-menuitem-text a {
+  color: #000;
+}
+
+/* line 169, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-separator {
+  border-color: #bab9bd;
+}
+
+/* line 174, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-grid-row-alt {
+  background-color: #fcfcfc;
+}
+
+/* line 178, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-grid-cell, .mini-listbox-item td, .mini-grid-detailCell, .mini-grid-summaryCell {
+  border-color: #e6e6e6;
+}
+
+/* line 183, ../../../src/sass/miniui/skins/_metro-white.scss */
+html body .mini-grid .mini-grid-cell-selected {
+  background: #efefef;
+}
+
+/* line 188, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-grid-header-over, .mini-grid-column-trigger {
+  background: #efefef;
+}
+
+/* line 193, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-tabs-header-top .mini-tab-active {
+  border-bottom-color: #fff;
+}
+
+/* line 197, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-tabs-header-bottom .mini-tab-active {
+  border-top-color: #fff;
+}
+
+/* line 201, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-tabs-header-left .mini-tab-active {
+  border-right-color: #fff;
+}
+
+/* line 205, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-tabs-header-right .mini-tab-active {
+  border-left-color: #fff;
+}
+
+/* line 210, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-tree-selectedNode .mini-icon, .mini-tree-selectedNode a,
+.mini-grid-row-selected .mini-grid-cell-inner > .mini-icon,
+.mini-grid-row-selected .mini-grid-cell-inner > * > .mini-icon,
+.mini-grid-cell-selected > .mini-icon,
+.mini-grid-cell-selected > * > .mini-icon,
+.mini-grid-row-selected .mini-tree-nodeshow > .mini-icon {
+  color: #444;
+}
+
+/* corner */
+/* line 221, ../../../src/sass/miniui/skins/_metro-white.scss */
+.mini-corner-all {
+  /*border-radius:6px;*/
+}
+
+/* other theme */
+/* line 4, ../../../src/sass/miniui/_miniui-patch.scss */
+.mini-required label {
+  /*color: #ff0000;*/
+}
+/* line 6, ../../../src/sass/miniui/_miniui-patch.scss */
+.mini-required label i {
+  color: #ff0000;
+}
+
+/* line 27, ../../../src/sass/miniui/_miniui-bootstrap-patch.scss */
+.mini-panel .container {
+  box-sizing: border-box;
+  width: 100% !important;
+}
+/* line 30, ../../../src/sass/miniui/_miniui-bootstrap-patch.scss */
+.mini-panel .container * {
+  box-sizing: border-box;
+}

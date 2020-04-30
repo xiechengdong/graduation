@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>学生用户管理</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script src="../../resources/core/js/commons/boot.js" load-resources="/../src/js/commons/unifieduser_utils.js,/../src/js/student/add.js,/../src/js/unifieduser/public/regexp.js" debug="true"
+            mock="false"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="../favicon.ico"/>
+</head>
+<style type="text/css">
+    .form-table tr th{
+        width: 140px;
+        font-weight: 500;
+        text-align: right !important;
+        padding: 5px 1px !important;
+    }
+    .form-table tr td{
+        padding: 5px 1px !important;
+    }
+</style>
+<body>
+
+
+<div id="formPanel" class="form-panel">
+    <div class="mini-panel form-group" showHeader="true" iconCls="fa fa-window-minimize fa-rotate-270"
+         title="学生用户信息修改" style="width: 100%;">
+        <table class="form-table">
+            <tr>
+                <th><b style='color: red'>*</b>姓名：</th>
+                <td>
+                    <input class="mini-textbox" vtype="maxLength:50;minLength:1" required="true"
+                           id="name" name="name"/>
+                </td>
+                <th><b style='color: red'>*</b>学号：</th>
+                <td>
+                    <input class="mini-textbox" vtype="maxLength:50;minLength:1" required="true"
+                           id="number" name="number"
+
+                    />
+                </td>
+                <th><b style='color: red'>*</b>专业：</th>
+                <td >
+                    <input class="mini-textbox" vtype="maxLength:50;minLength:1" required="true"
+                           id="major" name="major"/>
+                </td>
+            </tr>
+            <tr>
+                <th><b style='color: red'>*</b>电话：</th>
+                <td >
+                    <input class="mini-textbox" vtype="maxLength:11;minLength:1" required="true"
+                           id="phone" name="phone"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="btn-bar">
+        <a id="savebtn" class="mini-button" onclick="fromAction.save()">保存</a>
+        <a id="backbtn" class="mini-button" onclick="fromAction.goBack()">返回</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: sms
+  rabbitmq:
+    host: 192.168.43.10
+aliyun:
+  sms:
+    accessKeyId: LTAI4FgwnBqWpDMmtk6ms4Nv
+    accessKeySecret: biImWVX2oCK8LRRJmoLT83fSvQA7PE
+    template_code: SMS_174986514
+    sign_name: tensquare短信

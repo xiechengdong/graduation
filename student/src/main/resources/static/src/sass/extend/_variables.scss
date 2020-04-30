@@ -1,0 +1,41 @@
+// wissip UI 设置
+// =========================
+
+//背景颜色
+$main-background:        #f0f0f0 !default;//#fff
+
+
+// 框架tabs设置
+// --------------------------------------------------------
+//标签背景
+$main-tab-background:        #f7f7f7 !default;
+//选中标签背景
+$main-tab-active-background:        $main-background !default;
+//活动标签上轮廓背景颜色
+$main-tab-active-top-background:        #3c8dbc !default;
+//边框颜色
+$main-tab-border-color:        #d3d3d3 !default;//#d3d3d3
+//边框颜色
+$main-tabs-tool-button-background:        $main-tab-background !default;//#e2e2e2
+
+// --------------------------------------------------------
+
+// 框架菜单设置
+// --------------------------------------------------------
+//菜单背景颜色
+$sidebar-menu-background:        #42485b !default;
+//菜单文字颜色
+$sidebar-menu-color:        #fff !default;
+
+
+// 弹出窗口设置
+// --------------------------------------------------------
+//窗口标题背景颜色
+$window-header-background:        darken($light-blue, 5%) !default;
+//菜单文字颜色
+$sidebar-menu-color:        #fff !default;
+
+// 图标
+// --------------------------------------------------------
+$font-css-prefix: mf;//图标样式前缀
+

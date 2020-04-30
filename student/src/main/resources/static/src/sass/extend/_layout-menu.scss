@@ -1,0 +1,32 @@
+﻿
+/*
+*菜单
+*/
+.sidebar-menu {
+	padding-left: 0;
+	li {
+		a {
+			padding-left: 0.5em;
+		}
+	}
+	.treeview {
+		.treeview-menu {
+			padding-left: 0;
+			li {
+				a {
+					padding-left: 1.5em;
+				}
+			}
+			.treeview {
+				.treeview-menu {
+					padding-left: 0;
+					li {
+						a {
+							padding-left: 2.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+﻿.sidebar-collapse .main
+{
+	left:52px;
+
+	@media (max-width: $screen-header-collapse) {
+		//top: $navbar-height * 2;
+		left:0;
+	}
+}
+
+.main {
+	position:absolute;
+	top:$navbar-height;
+	left:$sidebar-width;
+	right:0;
+	bottom:0;
+	background:$main-background;
+
+	@media (max-width: $screen-header-collapse) {
+		//top: $navbar-height * 2;
+		left:6px;
+	}
+}
+
+.mini-window {
+	.mini-panel-border {
+		.mini-panel-header {
+			    background: $window-header-background;
+			    color: #fff;
+			    .mini-tools {
+				    .mini-icon {
+					    color: #fff;
+					}
+			    }
+			    
+		}	
+	}
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>课程</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script src="../../resources/core/js/commons/boot.js" load-resources="/../src/js/system/list.js,/../src/js/commons/unifieduser_utils.js" debug="true"
+            mock="false"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="list">
+<div class="mini-toolbar searchbar">
+    <table>
+        <tr>
+            <td style="width: 100%;">
+                <a class="mini-button" iconCls="fa fa-pencil fa-fw" plain="false" onclick="listAction.add" tooltip="新增">新增</a>
+            </td>
+            <td style="white-space: nowrap;">
+                <input id="content" class="mini-textbox" width="300" emptyText="查询条件" />
+<!--                <input id="number" class="mini-textbox" emptyText="学号" />-->
+<!--                <input id="major" class="mini-textbox" emptyText="专业" />-->
+<!--                <input id="phone" class="mini-textbox" emptyText="电话" />-->
+                <a class="mini-button" iconCls="fa fa-search" plain="false" onclick="listAction.doQuery" tooltip="开始查询">查询</a>
+                <a class="mini-button" iconCls="fa fa-undo" plain="false" onclick="listAction.doQueryClear" tooltip="清除查询条件查询"></a>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--撑满页面-->
+<div class="mini-fit">
+    <div id="datagrid1" class="mini-datagrid" onshowrowdetail="listAction.onShowRowDetail" style="width: 100%; height: 100%;" idField="id" sizeList="[10,20,50]" pageSize="20">
+        <div property="columns">
+            <div type="indexcolumn" headerAlign="center">序号</div>
+            <div field="phone_tel" width="50" headerAlign="center" align="center">客服电话</div>
+            <div field="gongao_time" width="40" headerAlign="center" align="center"  >公告时间</div>
+            <div field="gongao_info" width="100" headerAlign="center" align="center" >公告内容</div>
+            <div field="system_about" width="100" headerAlign="center" align="center" >关于内容</div>
+            <div field="id" width="50" headerAlign="center" align="center" renderer="listAction.onOperatorRenderer">操作描述</div>
+        </div>
+    </div>
+</div>
+<script>
+    mini.parse();
+</script>
+</body>
+</html>

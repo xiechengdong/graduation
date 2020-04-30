@@ -1,0 +1,60 @@
+.nav-tabs-custom.login-box-body {
+	padding: 0;
+	.tab-content {
+		padding: $box-padding*2 $box-padding*2 $box-padding $box-padding*2;
+		.tab-pane {
+		}
+	}
+	margin-bottom: 0;
+}
+
+.login-logo,
+.register-logo {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.login-box,
+.register-box {
+  margin: 7% auto auto auto;
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    margin: 20px 4px 0 4px;
+  }
+}
+
+.login-box-footer,
+.register-box-footer {
+  background: #fff;
+  padding: $box-padding $box-padding*2 $box-padding*2 $box-padding*2;
+  border-top: 0;
+  color: #666;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top: 1px solid $box-border-color;
+}
+
+.popup-win {
+
+  .login-box-footer,
+  .register-box-footer {
+    display: none;
+  }
+
+  .btn-forget, .btn-register {
+    display: none;
+  }
+}
+
+.unselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+
+  /* 以下两个属性目前并未支持，写在这里为了减少风险 */
+  -o-user-select: none;
+  user-select: none;
+}

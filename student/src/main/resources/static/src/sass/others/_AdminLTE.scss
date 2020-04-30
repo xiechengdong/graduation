@@ -1,0 +1,62 @@
+/*!
+ *   AdminLTE v2.4.8
+ *   Author: Almsaeed Studio
+ *	 Website: Almsaeed Studio <https://adminlte.io>
+ *   License: Open source - MIT
+ *           Please visit http://opensource.org/licenses/MIT for more information
+ */
+// Bootstrap
+//--------------------------------------------------------
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
+
+// MISC
+//--------------------------------------------------------
+@import "common/mixins";
+@import "common/variables";
+@import "common/core";
+
+// COMPONENTS
+//--------------------------------------------------------
+@import "common/header";
+@import "common/sidebar";
+@import "common/sidebar-mini";
+@import "common/control-sidebar";
+@import "common/dropdown";
+@import "common/forms";
+@import "common/progress-bars";
+@import "common/small-box";
+@import "common/boxes";
+@import "common/info-box";
+@import "common/timeline";
+@import "common/buttons";
+@import "common/callout";
+@import "common/alerts";
+@import "common/navs";
+@import "common/products";
+@import "common/table";
+@import "common/labels";
+@import "common/direct-chat";
+@import "common/users-list";
+@import "common/carousel";
+@import "common/modal";
+@import "common/social-widgets";
+@import "common/treeview";
+
+// PAGES
+//--------------------------------------------------------
+@import "common/mailbox";
+@import "common/lockscreen";
+@import "common/login_and_register";
+@import "common/404_500_errors";
+@import "common/invoice";
+@import "common/profile";
+
+// Plugins
+//--------------------------------------------------------
+@import "common/plugins";
+
+// Miscellaneous
+//--------------------------------------------------------
+@import "common/miscellaneous";
+@import "common/print";

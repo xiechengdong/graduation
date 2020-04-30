@@ -1,0 +1,293 @@
+/* CSS Document */
+
+/****************asLabel*****************/
+.asLabel .mini-textbox-border,.asLabel .mini-textbox-input,.asLabel .mini-buttonedit-border,.asLabel .mini-buttonedit-input,.asLabel .mini-textboxlist-border
+	{
+	border: 0;
+	background: none;
+	cursor: default;
+	overflow: hidden;
+}
+
+.asLabel .mini-buttonedit-button,.asLabel .mini-textboxlist-close {
+	display: none;
+}
+
+.asLabel .mini-textboxlist-item {
+	padding-right: 8px;
+}
+
+.readonly .mini-textbox-border,.readonly .mini-textbox-input,.readonly .mini-buttonedit-border,.readonly .mini-buttonedit-input
+	{
+	background-color: #e7e7e7;
+}
+
+.readonly .mini-buttonedit-button,.readonly .mini-textboxlist-close {
+	display: none;
+}
+
+.asDisabled .mini-textbox-input,.asDisabled .mini-buttonedit-input {
+	color: gray;
+}
+
+/****************panel*****************/
+.mini-panel-noborder {
+	border: 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+.mini-panel-noborder .mini-panel-header {
+	border: 1px solid #999999;
+	border-bottom: 0px;
+}
+
+
+/****************grid*****************/
+.mini-datagrid-wonders .mini-grid-headerCell
+{   
+    border-left:0px;
+    border-top:0px;
+    height:22px
+}
+
+.mini-datagrid-wonders .mini-grid-topRightCell
+{
+   
+}
+
+.mini-datagrid-wonders .mini-grid-cell
+{   
+	border: 1px solid #999999;
+ 	border-collapse: collapse;
+ 	border-left:0px;
+    border-top:0px;
+}
+
+.mini-datagrid-wonders .mini-grid-border
+{
+ 	border: 1px solid #999999;
+ 	border-collapse: collapse;
+}
+
+.mini-datagrid-wonders .mini-resizer-trigger
+{
+    display:none;
+}
+
+.mini-datagrid-wonders .mini-grid-rowstable
+{
+   height:22px;
+   border-collapse: collapse;
+}
+.mini-datagrid-wonders .mini-grid-vscroll
+{
+  display:none;
+}
+
+.mini-datagrid-wonders .mini-grid-table
+{
+ 	 border-collapse: collapse;
+}
+
+.mini-datagrid-wonders .mini-grid-rowstable .gridrowlink a 
+{
+ 	text-decoration:underline;
+}
+
+.mini-datagrid-wonders .mini-grid-nobottom TD
+{
+	border-bottom:0;
+}
+.mini-datagrid-wonders .mini-grid-notop TD
+{
+	border-top:0;
+}
+
+.mini-datagrid-wonders .mini-grid-noright TD
+{
+	border-right:0;
+}
+
+.mini-datagrid-wonders .mini-grid-emptyText
+{
+	padding:2px;
+    text-align:center;
+}
+.mini-listgrid-wonders .mini-grid-summaryCell
+{   
+	height:20px;
+    background:none;
+    border: 1px solid #999999;
+    border-bottom:0px;
+    border-right:0px;
+    border-left:0px;
+ 	border-collapse: collapse;
+ 	font-weight: 700;
+ 	padding-top:0px;
+ 	padding-bottom:0px;
+ 	
+}
+.mini-listgrid-wonders .mini-grid-summaryRow
+{
+    overflow:hidden;background:none;position:relative;zoom:1;width:100%;
+}
+
+html body .mini-listgrid-wonders .mini-grid-cell-selected
+{
+    background:#dfe8f6;
+}
+
+.mini-printgrid-wonders .mini-grid-summaryCell
+{   
+	height:20px;
+    background:none;
+    border: 1px solid #999999;
+    border-bottom:0px;
+    border-right:0px;
+ 	border-collapse: collapse;
+ 	font-weight: 700;
+ 	padding-top:0px;
+ 	padding-bottom:0px;
+}
+.mini-printgrid-wonders .mini-grid-summaryRow
+{
+    overflow:hidden;background:none;position:relative;zoom:1;width:100%;
+}
+
+.mini-printgrid-wonders .mini-grid-headerCell
+{   
+    background:none;
+    color: black;
+}
+
+.mini-printgrid-wonders .mini-grid-topRightCell
+{
+    background:none;
+}
+
+.mini-printgrid-wonders .mini-grid-cell
+{
+ 	border: 1px solid #999999;
+ 	border-bottom:0px;
+ 	border-left:0px; 
+ 	border-collapse: collapse;
+}
+
+/*********************menu*********************/
+.mini-menu-wonders-border{
+	width: 100%;
+	font-size:12px;
+}
+.mini-menu-wonders-group{
+	 
+}
+.mini-menu-wonders-group h3{
+	height:20px;	 
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:14px;
+}
+.mini-menu-wonders-group .menulist{
+	background:#f2f2f2;
+	width:100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+.mini-menu-wonders-group .menulist li{
+	font-size:13px;
+	width:100%;
+	height:20px;
+	line-height:20px;
+	color:#303030;
+	padding-bottom:4px;
+	position:relative;
+}
+.mini-menu-wonders-group .menulist li a{
+	color:#303030;
+	padding-left:12px;
+	font-family:SimSun;
+	display:block;
+	font-family: 'Microsoft Yahei';
+	text-decoration: none;
+}
+
+.mini-menu-wonders-group .menulist li.cur a,
+.mini-menu-wonders-group .menulist li a:hover
+{
+	background-color:#048ce4;
+	color:#fff;
+}
+
+/******************others******************/
+.maxfit{
+	width:100%;height:100%;
+}
+
+.mr5{
+	margin-right: 5px;
+}
+
+.mini-checkboxlist-item-selected {
+	font-weight: 700;
+}
+
+.icon-excel {
+	background: url(../images/xls.gif) no-repeat;
+}
+
+.icon-mail {
+	background: url(../images/mail.gif) no-repeat;
+}
+
+.icon-mail-opened {
+	background: url(../images/mail-opened.gif) no-repeat;
+}
+
+.icon-mail-rp {
+	background: url(../images/mail-reply.gif) no-repeat 0px -1px;
+}
+
+.icon-attach {
+	background: url(../images/attach.gif) no-repeat;
+}
+
+.icon-logout {
+	background: url(../images/logout.gif) no-repeat;
+}
+
+.icon-query {
+	background: url(../images/query.gif) no-repeat;
+}
+
+.mini-labelfield-label {
+	display:inline;
+	width: 80px;
+	text-align: right;
+}
+
+body .mini-labelfield
+{
+    display:inline;
+    width:250px;
+    margin-bottom:5px;
+    float:left;
+}
+label .mini-labelfield
+{
+    display:inline;
+    width:250px;
+    margin-bottom:5px;
+    float:left;
+}
+
+.menu-note
+{
+  background:url(../images/note.png) no-repeat;width:32px;height:32px;
+}
+
+

@@ -1,0 +1,38 @@
+{
+  "name": "jshash",
+  "version": "2.9.1",
+  "homepage": "https://github.com/stuartpb/jshash",
+  "authors": [
+    "Paul Johnston <paj@pajhome.org.uk>",
+    "Stuart P. Bentley <stuart@testtrack4.com>"
+  ],
+  "description": "JavaScript hash functions",
+  "keywords": [
+    "hash",
+    "md5",
+    "sha1",
+    "sha256",
+    "sha512",
+    "ripemd160"
+  ],
+  "license": "BSD-2-Clause",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Makefile",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "_release": "2.9.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.9.1",
+    "commit": "1194b71f002221d879a288f4efbfd9b86f11444e"
+  },
+  "_source": "https://github.com/stuartpb/jshash.git",
+  "_target": "^2.9.1",
+  "_originalSource": "jshash"
+}

@@ -1,0 +1,35 @@
+﻿//============================================================
+//miniui下网格显示不正常修正
+
+//重置bootstrap,网格在table中的padding
+@mixin reset-miniui-in-bootstrap-grids($i: 1, $list: ".col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+    @for $i from (1 + 1) through $grid-columns {
+        $list: "#{$list}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+    }
+    #{$list} {
+        padding-top: floor(($grid-gutter-width / 6)) !important;
+        padding-bottom: ceil(($grid-gutter-width / 6)) !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@mixin reset-miniui-in-bootstrap-grids_2($i: 1, $list: ".col-xs-#{$i}") {
+    @for $i from (1 + 1) through $grid-columns {
+        $list: "#{$list}, .col-xs-#{$i}";
+    }
+    #{$list} {
+        padding-top: floor(($grid-gutter-width / 6)) !important;
+        padding-bottom: ceil(($grid-gutter-width / 6)) !important;
+    }
+}
+
+.mini-panel .container {
+
+    box-sizing:border-box;
+    * {
+        box-sizing:border-box;
+    }
+
+    width: 100% !important;
+}

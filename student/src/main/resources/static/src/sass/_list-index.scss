@@ -1,0 +1,83 @@
+// Bootstrap
+//--------------------------------------------------------
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
+
+// MISC
+//--------------------------------------------------------
+@import "common/mixins";
+@import "common/variables";
+@import "common/core";
+
+html.list, body.list {
+	margin:0;
+	padding:0;
+	border:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.list {
+	.searchbar {
+		padding:2px;
+		border-bottom:0;
+		> div {
+			> label {
+				/*
+				width:8em;
+				margin-right: 0.5em;
+				text-align: right;
+				*/
+				display: inline-block;
+				font-weight: normal;
+			}
+		}
+		table {
+			width: 100%;
+			td, th {
+				padding: 4px 6px;
+			}
+			td label {
+					/*width:8em;*/
+					display: inline-block;
+					/*text-align: right;*/
+					/*margin-right: 0.5em;*/
+					font-weight: normal;
+			}
+			td mini-textbox {
+			}
+		}
+	    //小屏幕隐藏搜索栏按钮图标
+	    @media (max-width: $screen-header-collapse) {
+			.mini-button {
+				width: 28px;
+				height: 26px;
+				.mini-button-icon-text {
+					padding-left: 16px;
+					.mini-button-icon {
+						left: 7px;
+						top: 7px;
+					}
+					.mini-button-text {
+						display: none;
+					}
+				}
+	      }
+	    }
+	}
+
+	.mini-panel.searchbar {
+		&> .mini-panel-border {
+			&> .mini-panel-header {
+				width:100%;
+				.mini-panel-title {
+					color:#2c79ad;
+					font-weight:bold;
+				}
+				.mini-panel-icon {
+					color:#2c79ad;
+				}
+			}
+		}
+	}
+}
